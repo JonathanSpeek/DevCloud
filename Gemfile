@@ -20,6 +20,7 @@ gem 'font-awesome-sass'
 gem 'redcarpet'
 gem 'pygments.rb'
 gem 'fog-aws'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'
