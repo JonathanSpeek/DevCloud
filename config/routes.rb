@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   resources :notes
   resources :uploads
 
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+
   authenticated :user do
     root 'notes#index', as: 'authenticated_root'
   end
