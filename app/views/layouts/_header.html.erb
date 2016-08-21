@@ -2,9 +2,8 @@
   <nav class="blue-grey lighten-5" role="navigation">
     <div class="nav-wrapper container">
       <a href="#" data-activates="nav-mobile" class=" button-collapse"><i class="material-icons">menu</i></a>
-      <%= link_to "DevCloud", root_url, class: 'brand-logo grey-text text-darken-4', id: 'logo-container'  %>
+      <%= link_to "DevCloud", root_url, class: 'brand-logo grey-text text-darken-4', id: 'logo-container' %>
       <ul class="right hide-on-med-and-down">
-
         <% if user_signed_in? %>
             <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
         <% else %>
