@@ -18,4 +18,4 @@
 .env
 Procfile
 .idea/
-config/initalizers/carrierwave.rb
+config/initializers/carrierwave.rb
