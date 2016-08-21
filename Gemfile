@@ -14,7 +14,7 @@ gem 'devise'
 gem 'materialize-sass'
 gem 'omniauth'
 gem 'aws-sdk'
-gem 'paperclip'
+gem 'carrierwave'
 gem "omniauth-google-oauth2", "~> 0.2.1"
 gem 'omniauth-github'
 gem 'font-awesome-sass'
