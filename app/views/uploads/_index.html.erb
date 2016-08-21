@@ -1,0 +1,18 @@
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Download Link</th>
+    <th>&nbsp;</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @uploads.each do |upload| %>
+      <tr>
+        <td><%= upload.name %></td>
+        <td><%= link_to 'Download File', upload.attachment_url, target: '_blank' %></td>
+        <td><%= button_to 'Delete',  upload, method: :delete, alert: "Are you sure that you wish to delete #{upload.name}?" %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
