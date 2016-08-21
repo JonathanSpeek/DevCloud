@@ -48,15 +48,6 @@ Rails.application.configure do
   # when problems arise.
   config.log_level = :debug
 
-
-    config.fog_credentials = {
-        provider: 'AWS',
-        :aws_access_key_id => ENV['AWS_KEY'],
-        :aws_secret_access_key => ENV['AWS_SECRET'],
-        region: 'us-west-2',
-    }
-    config.fog_directory = 'speekdevcloud'
-
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
