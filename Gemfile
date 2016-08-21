@@ -13,14 +13,13 @@ gem 'simple_form'
 gem 'devise'
 gem 'materialize-sass'
 gem 'omniauth'
-gem 'aws-sdk'
 gem 'carrierwave'
-gem "omniauth-google-oauth2", "~> 0.2.1"
+gem 'omniauth-google-oauth2', '~> 0.2.1'
 gem 'omniauth-github'
 gem 'font-awesome-sass'
 gem 'redcarpet'
 gem 'pygments.rb'
-
+gem 'fog-aws'
 
 group :development, :test do
   gem 'byebug'
