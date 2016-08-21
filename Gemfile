@@ -18,6 +18,8 @@ gem 'paperclip'
 gem "omniauth-google-oauth2", "~> 0.2.1"
 gem 'omniauth-github'
 gem 'font-awesome-sass'
+gem 'redcarpet'
+gem 'pygments.rb'
 
 
 group :development, :test do
