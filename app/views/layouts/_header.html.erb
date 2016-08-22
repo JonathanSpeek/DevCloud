@@ -5,8 +5,8 @@
       <%= link_to 'DevCloud', root_url, class: 'brand-logo yellow-text text-accent-4', id: 'logo-container' %>
       <ul class="right hide-on-med-and-down">
         <% if user_signed_in? %>
-            <li><%= link_to 'New Note', new_note_path, class: 'white-text' %></li>
-              <li><%= link_to 'New File', new_upload_path, class: 'white-text' %></li>
+            <li><%= link_to 'New Wiki', new_note_path, class: 'white-text' %></li>
+              <li><%= link_to 'Add File', new_upload_path, class: 'white-text' %></li>
             <li><%= link_to 'Log Out', destroy_user_session_path, :method => :delete, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
         <% else %>
             <li><%= link_to 'Log in', new_user_session_path, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
