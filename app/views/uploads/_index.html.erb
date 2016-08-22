@@ -11,7 +11,7 @@
       <tr>
         <td><%= upload.name %></td>
         <td><%= link_to 'Download File', upload.attachment_url, target: '_blank', class: 'btn yellow accent-4 grey-text text-darken-4' %></td>
-        <td><%= link_to 'Delete', upload, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn grey-text text-lighten-5 red darken-4' %></td>
+        <td><%= button_to 'Delete', upload, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn grey-text text-lighten-5 red darken-4' %></td>
       </tr>
   <% end %>
   </tbody>
