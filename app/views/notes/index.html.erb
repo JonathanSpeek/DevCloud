@@ -1,20 +1,27 @@
+<br>
+<br>
+<h1>Wikis</h1>
+<hr>
 <% unless @notes.blank? %>
-    <button>
-      <%= link_to "New Note", new_note_path %>
-    </button>
-    <button>
-      <%= link_to "New File", new_upload_path %>
-    </button>
-    <% @notes.each do |note| %>
-        <a href="<%= (url_for [note]) %>">
-            <p>
-              <%= note.title %>
-            </p>
-            <p>
-              <%= time_ago_in_words(note.created_at) %>
-            </p>
-        </a>
-    <% end %>
+    <div class="row">
+      <% @notes.each do |note| %>
+      <div class="col s12 m6">
+        <div class="card yellow-text text-accent-4 grey darken-4">
+          <div class="card-content yellow-text text-accent-4">
+                <h2><span class="card-title"><%= note.title %></span></h2>
+                <p><%= time_ago_in_words(note.created_at) %></p>
+                </div>
+                <div class="card-action">
+                  <p><a class="yellow-text text-accent-4" href="<%= (url_for [note]) %>">Read Wiki</a></p>
+            </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <br>
+    <br>
+    <h1>Files</h1>
+    <hr>
     <%= render 'uploads/index' %>
 <% else %>
     <h2>Add a Note</h2>
@@ -23,6 +30,6 @@
       <%= link_to "New Note", new_note_path %>
     </button>
     <button>
-    <%= link_to "New File", new_upload_path %>
+      <%= link_to "New File", new_upload_path %>
     </button>
 <% end %>
