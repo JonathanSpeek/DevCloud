@@ -1,5 +1,5 @@
 class UploadsController < ApplicationController
-  before_action :find_upload, only: [:show, :edit, :update, :destroy]
+  before_action only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
   def index
