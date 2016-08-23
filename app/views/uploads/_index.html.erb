@@ -1,3 +1,4 @@
+<% unless @uploads.blank? %>
 <table class="highlight">
   <thead>
   <tr>
@@ -16,3 +17,7 @@
   <% end %>
   </tbody>
 </table>
+<% else %>
+    <p>It appears you haven't added any files yet... Lets fix that!</p>
+      <%= link_to 'Add File', new_upload_path, class: 'btn yellow accent-4 grey-text text-darken-4' %>
+<% end %>

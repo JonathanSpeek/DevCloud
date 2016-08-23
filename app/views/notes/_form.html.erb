@@ -1,5 +1,7 @@
+<h2>Edit Wiki</h2>
 <%= simple_form_for @note do |f| %>
     <%= f.input :title %>
-    <%= f.input :content %>
-    <%= f.button :submit, class: "button" %>
+    <%= f.input :content, id: 'textarea1', class: 'materialize-textarea'  %>
+    <br />
+    <%= f.button :submit, class: 'btn yellow accent-4 grey-text text-darken-4' %>
 <% end %>
