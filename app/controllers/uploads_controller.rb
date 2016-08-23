@@ -1,14 +1,17 @@
 class UploadsController < ApplicationController
+  before_action :find_upload, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+
   def index
-    @uploads = Upload.all
+    @uploads = Upload.all.where(user_id: current_user)
   end
 
   def new
-    @upload = Upload.new
+    @upload = current_user.uploads.new
   end
 
   def create
-    @upload = Upload.new(upload_params)
+    @upload = current_user.uploads.new(upload_params)
 
     if @upload.save
       redirect_to notes_path, notice: "The file #{@upload.name} has been uploaded."

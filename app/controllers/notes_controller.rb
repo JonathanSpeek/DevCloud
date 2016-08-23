@@ -4,7 +4,7 @@ class NotesController < ApplicationController
 
   def index
     @notes = Note.where(user_id: current_user)
-    @uploads = Upload.all
+    @uploads = Upload.where(user_id: current_user)
   end
 
   def show
