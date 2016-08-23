@@ -24,12 +24,12 @@
     <hr>
     <%= render 'uploads/index' %>
 <% else %>
-    <h2>Add a Note</h2>
-    <p>It appears you haven't created any notes yet... Lets fix that!</p>
-    <button>
-      <%= link_to "New Wiki", new_note_path %>
-    </button>
-    <button>
-      <%= link_to "Add File", new_upload_path %>
-    </button>
+    <p>It appears you haven't created any wikis yet... Lets fix that!</p>
+      <%= link_to "New Wiki", new_note_path, class: 'btn yellow accent-4 grey-text text-darken-4' %>
+    <br>
+    <br>
+    <h3>Files</h3>
+    <hr>
+    <%= render 'uploads/index' %>
 <% end %>
+<br /><br /><br />

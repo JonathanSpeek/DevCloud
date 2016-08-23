@@ -6,7 +6,9 @@
     <%= markdown @note.content %>
   </div>
   <div>
-    <%= link_to "Edit", edit_note_path(@note) %>
-    <%= link_to "Delete", note_path(@note), method: :delete, data: { confirm: "Are you sure?" } %>
+    <br />
+    <%= link_to "Edit", edit_note_path(@note), class: 'btn yellow accent-4 grey-text text-darken-4' %>
+    <br /><br />
+    <%= button_to "Delete", note_path(@note), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn grey-text text-lighten-5 red darken-4' %>
   </div>
 </div>

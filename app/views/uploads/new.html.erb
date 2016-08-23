@@ -1,9 +1,14 @@
+<h2>Add a File</h2>
+<br /><br />
 <div>
   <%= form_for @upload, html: { multipart: true } do |f| %>
       <%= f.label :name %>
       <%= f.text_field :name %>
+      <br /><br /><br />
       <%= f.label :attachment %>
       <%= f.file_field :attachment %>
-      <%= f.submit "Save" %>
+      <br /><br /><br />
+      <%= f.submit "Save", class: 'btn yellow accent-4 grey-text text-darken-4' %>
   <% end %>
 </div>
+<br /><br /><br />
