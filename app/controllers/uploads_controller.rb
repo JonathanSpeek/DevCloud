@@ -21,7 +21,7 @@ class UploadsController < ApplicationController
   end
 
   def destroy
-    @upload = StatusUpdate.find(params[:id])
+    @upload = Upload.find(params[:id])
     if @upload.present?
       @upload.destroy
     end
