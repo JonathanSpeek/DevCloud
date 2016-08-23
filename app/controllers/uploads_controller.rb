@@ -21,8 +21,11 @@ class UploadsController < ApplicationController
   end
 
   def destroy
-    @upload.destroy
-    redirect_to notes_path, notice:  "The file #{@upload.name} has been deleted."
+    @upload = StatusUpdate.find(params[:id])
+    if @upload.present?
+      @upload.destroy
+    end
+    redirect_to notes_path
   end
 
   private
