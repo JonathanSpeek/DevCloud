@@ -19,3 +19,4 @@
 Procfile
 .idea/
 config/application.yml
+public/uploads/upload/
