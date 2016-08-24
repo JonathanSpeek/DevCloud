@@ -18,7 +18,7 @@ gem 'omniauth-google-oauth2', '~> 0.2.1'
 gem 'omniauth-github'
 gem 'font-awesome-sass'
 gem 'redcarpet'
-gem 'pygments.rb'
+gem 'coderay'
 gem 'fog-aws'
 gem 'figaro'
 
