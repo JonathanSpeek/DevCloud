@@ -22,6 +22,7 @@ gem 'coderay'
 gem 'fog-aws'
 gem 'figaro'
 gem 'paranoia'
+gem 'mail_form'
 
 group :development, :test do
   gem 'byebug'
