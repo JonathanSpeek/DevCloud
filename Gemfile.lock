@@ -176,6 +176,8 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
+    paranoia (2.1.5)
+      activerecord (~> 4.0)
     parser (2.3.1.2)
       ast (~> 2.2)
     pg (0.18.4)
@@ -317,6 +319,7 @@ DEPENDENCIES
   omniauth
   omniauth-github
   omniauth-google-oauth2 (~> 0.2.1)
+  paranoia
   pg
   rails (= 4.2.4)
   rails_12factor

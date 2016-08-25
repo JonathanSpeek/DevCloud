@@ -21,6 +21,7 @@ gem 'redcarpet'
 gem 'coderay'
 gem 'fog-aws'
 gem 'figaro'
+gem 'paranoia'
 
 group :development, :test do
   gem 'byebug'
