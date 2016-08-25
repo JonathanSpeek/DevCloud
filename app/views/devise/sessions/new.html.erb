@@ -7,10 +7,15 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Log in", class: 'btn yellow accent-4 grey-text text-darken-4' %>
+    <%= f.button :submit, "Log in", class: 'btn yellow accent-4 grey-text text-darken-4' %>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Forgot?', new_password_path(resource_name), class: 'grey-text text-darken-4' %>
   </div>
 <% end %>
+<br />
+<div>
+  <h6>Log in with Github</h6>
+  <a href="https://devcloud1.herokuapp.com/users/auth/github" class="btn yellow-text text-accent-4 grey darken-4">Github</a>
+</div>
+
 
 <br />
 <br />
-<%= link_to 'Forgot?', new_password_path(resource_name), class: 'grey-text text-darken-4' %>
