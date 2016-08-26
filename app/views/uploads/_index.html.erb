@@ -1,10 +1,15 @@
 <% unless @uploads.blank? %>
+    <br>
+    <h3>Files&nbsp&nbsp<%= link_to new_upload_path, class: 'btn-floating yellow accent-4 grey-text text-darken-4' do %>
+          <i class="material-icons grey-text text-darken-4">input</i>
+      <% end %></h3>
+    <hr>
 <table class="highlight">
   <thead>
   <tr>
     <th>File</th>
-    <th>Download Link</th>
-    <th>&nbsp;</th>
+    <th>Download</th>
+    <th>&nbsp</th>
   </tr>
   </thead>
   <tbody>
@@ -18,6 +23,9 @@
   </tbody>
 </table>
 <% else %>
+    <br>
+    <h3>Files</h3>
+    <hr>
     <p>It appears you haven't added any files yet... Lets fix that!</p>
       <%= link_to 'Add File', new_upload_path, class: 'btn yellow accent-4 grey-text text-darken-4' %>
 <% end %>

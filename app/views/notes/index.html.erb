@@ -1,8 +1,10 @@
 <br>
-<br>
-<h3>Wikis</h3>
-<hr>
 <% unless @notes.blank? %>
+    <br>
+    <h3>Wikis&nbsp&nbsp<%= link_to new_note_path, class: 'btn-floating yellow accent-4 grey-text text-darken-4' do %>
+          <i class="material-icons grey-text text-darken-4">note_add</i>
+      <% end %></h3>
+    <hr>
     <div class="row">
       <% @notes.each do |note| %>
       <div class="col s12 m6">
@@ -19,11 +21,12 @@
       <% end %>
     </div>
     <br>
-    <br>
-    <h3>Files</h3>
-    <hr>
+
     <%= render 'uploads/index' %>
 <% else %>
+    <br>
+    <h3>Wikis</h3>
+    <hr>
     <p>It appears you haven't created any wikis yet... Lets fix that!</p>
       <%= link_to "New Wiki", new_note_path, class: 'btn yellow accent-4 grey-text text-darken-4' %>
     <br>

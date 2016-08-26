@@ -20,6 +20,7 @@
         <% if user_signed_in? %>
             <li><%= link_to 'New Wiki', new_note_path, class: 'btn grey darken-4 yellow-text text-accent-4' %></li>
             <li><%= link_to 'Add File', new_upload_path, class: 'btn grey darken-4 yellow-text text-accent-4' %></li>
+            <li><%= link_to 'Contact Us', contacts_path, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
             <li><%= link_to 'Log Out', destroy_user_session_path, :method => :delete, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
         <% else %>
             <li><%= link_to 'Contact Us', contacts_path, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
