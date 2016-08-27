@@ -106,7 +106,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :github, ENV['Github_Key'], ENV['Github_Secret']
+  config.omniauth :github, ENV['Github_Key'], ENV['Github_Secret'], scope: 'user,repo,gist'
   config.omniauth :google_oauth2, ENV['Google_Key'], ENV['Google_Secret']
   config.omniauth :slack, ENV['SLACK_KEY'], ENV['SLACK_SECRET'], scope: 'client'
   # ==> Warden configuration
