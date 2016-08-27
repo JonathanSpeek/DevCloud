@@ -24,6 +24,7 @@ gem 'fog-aws'
 gem 'figaro'
 gem 'paranoia'
 gem 'mail_form'
+gem 'cancancan'
 
 group :development, :test do
   gem 'byebug'
