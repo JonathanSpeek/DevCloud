@@ -20,7 +20,7 @@
       <ul class="side-nav" id="mobile-demo">
         <% if user_signed_in? %>
             <li><%= image_tag(current_user.image, class: 'circle responsive-img mobile_profile_pic', :size => '60x60', alt: current_user.name) %></li>
-            <li><a class='btn-flat grey-text text-darken-4'><%= current_user.name %></a></li>
+            <li><a class='btn white grey-text text-darken-4'><%= current_user.name %></a></li>
             <li><%= link_to 'Home', root_url, class: 'btn grey darken-4 yellow-text text-accent-4' %></li>
             <li><%= link_to 'New Wiki', new_note_path, class: 'btn grey darken-4 yellow-text text-accent-4' %></li>
             <li><%= link_to 'Add File', new_upload_path, class: 'btn grey darken-4 yellow-text text-accent-4' %></li>
