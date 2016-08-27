@@ -27,8 +27,12 @@
     <br>
     <h3>Wikis</h3>
     <hr>
-    <p>It appears you haven't created any wikis yet... Lets fix that!</p>
-      <%= link_to "New Wiki", new_note_path, class: 'btn yellow accent-4 grey-text text-darken-4' %>
+    <% if current_user.name %>
+      <p>It appears you haven't created any wikis yet, <%= current_user.name %>... Lets fix that!</p>
+    <% else %>
+      <p>It appears you haven't created any wikis yet... Lets fix that!</p>
+    <% end %>
+    <%= link_to "New Wiki", new_note_path, class: 'btn yellow accent-4 grey-text text-darken-4' %>
     <br>
     <br>
     <%= render 'uploads/index' %>
