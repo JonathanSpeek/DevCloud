@@ -6,7 +6,7 @@
       <ul class="right hide-on-med-and-down">
         <% if user_signed_in? %>
             <% if current_user.image %>
-                <li>Hey there, <span class="yellow-text text-accent-4"><%= current_user.name%></span></li>
+                <li>Hey there, <span class="yellow-text text-accent-4"><%= current_user.name%></span>&nbsp;&nbsp;&nbsp;</li>
                 <li><%= image_tag(current_user.image, class: 'circle responsive-img profile_pic', :size => '48x48', alt: current_user.name) %></li>
                 <li><%= link_to(destroy_user_session_path, :method => :delete) do %>
                       <i class="material-icons yellow-text text-accent-4">trending_flat</i>
