@@ -5,8 +5,6 @@
       <a href="#" data-activates="mobile-demo" class=" button-collapse white-text"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <% if user_signed_in? %>
-            <li><%= link_to 'New Wiki', new_note_path, class: 'white-text' %></li>
-            <li><%= link_to 'Add File', new_upload_path, class: 'white-text' %></li>
             <li><%= link_to 'Log Out', destroy_user_session_path, :method => :delete, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
             <% if current_user.image %>
             <li><%= image_tag(current_user.image, class: 'circle responsive-img profile_pic', :size => '48x48', alt: current_user.name) %></li>
