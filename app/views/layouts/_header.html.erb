@@ -2,17 +2,24 @@
   <nav class="grey darken-4" role="navigation">
     <div class="nav-wrapper container">
       <%= link_to 'DevCloud', root_url, class: 'brand-logo yellow-text text-accent-4', id: 'logo-container' %>
-      <a href="#" data-activates="mobile-demo" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+      <a href="#" data-activates="mobile-demo" class=" button-collapse white-text"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <% if user_signed_in? %>
             <% if current_user.image %>
-            <li><%= image_tag(current_user.image, class: 'circle responsive-img profile_pic', :size => '48x48', alt: current_user.name) %></li>
+                <li>Hey there, <span class="yellow-text text-accent-4"><%= current_user.name%></span></li>
+                <li><%= image_tag(current_user.image, class: 'circle responsive-img profile_pic', :size => '48x48', alt: current_user.name) %></li>
+                <li><%= link_to(destroy_user_session_path, :method => :delete) do %>
+                      <i class="material-icons yellow-text text-accent-4">trending_flat</i>
+                  <% end %>
+                </li>
             <% else %>
-            <li><span class="yellow-text text-accent-4"><%= current_user.email%></span></li>
+                <li>Hey there, <span class="yellow-text text-accent-4"><%= current_user.email%></span></li>
+                <li><%= link_to(destroy_user_session_path, :method => :delete) do %>
+                      <i class="material-icons yellow-text text-accent-4">trending_flat</i>
+                  <% end %>
+                </li>
             <% end %>
-            <!-- Dropdown Trigger -->
-            <li><a constrain_width="false" data-beloworigin="true" id="menu-button1" class="dropdown-button" href="#" data-activates="dropdown12"><i class="material-icons yellow-text text-accent-4">more_vert</i></a></li>
-      <% else %>
+        <% else %>
             <li><%= link_to 'Contact Us', contacts_path, class: 'white-text' %></li>
             <li><%= link_to 'Sign up', new_registration_path(resource_name) %></li>
             <li><%= link_to 'Log in', new_user_session_path, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
@@ -20,23 +27,10 @@
         <% end %>
       </ul>
 
-
-      <!-- Dropdown Structure -->
-      <ul id="dropdown12" class="dropdown-content">
-        <% if user_signed_in? %>
-        <li><%= link_to 'Home', root_url, class: 'grey-text text-darken-4' %></li>
-        <li><%= link_to 'New Wiki', new_note_path, class: 'grey-text text-darken-4' %></li>
-        <li><%= link_to 'Add File', new_upload_path, class: 'grey-text text-darken-4' %></li>
-        <li><%= link_to 'Contact', contacts_path, class: 'grey-text text-darken-4' %></li>
-            <li class="divider"></li>
-        <li><%= link_to 'Log Out', destroy_user_session_path, :method => :delete, class: 'yellow accent-4 grey-text text-darken-4' %></li>
-        <% end %>
-      </ul>
-
       <ul class="side-nav" id="mobile-demo">
         <% if user_signed_in? %>
             <% if current_user.image %>
-            <li><%= image_tag(current_user.image, class: 'circle responsive-img mobile_profile_pic', :size => '140x140', alt: current_user.name) %></li>
+                <li><%= image_tag(current_user.image, class: 'circle responsive-img mobile_profile_pic', :size => '140x140', alt: current_user.name) %></li>
             <% end %>
             <li><%= link_to 'Home', root_url, class: 'btn grey darken-4 yellow-text text-accent-4' %></li>
             <li><%= link_to 'New Wiki', new_note_path, class: 'btn grey darken-4 yellow-text text-accent-4' %></li>
@@ -52,12 +46,6 @@
       </ul>
     </div>
   </nav>
-  <script>
-    $(document).click(function(){
-// ID of your menu button here
-      $("#menu-button1").click();
-    });
-  </script>
   <script>$( document ).ready(function(){
     $('.button-collapse').sideNav();
   });</script>
