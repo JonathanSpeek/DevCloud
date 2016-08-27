@@ -8,7 +8,6 @@
             <li><%= link_to 'New Wiki', new_note_path, class: 'white-text' %></li>
             <li><%= link_to 'Add File', new_upload_path, class: 'white-text' %></li>
             <li><%= link_to 'Log Out', destroy_user_session_path, :method => :delete, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
-            <%= link_to image_tag @user.image %>
         <% else %>
             <li><%= link_to 'Contact Us', contacts_path, class: 'white-text' %></li>
             <li><%= link_to 'Sign up', new_registration_path(resource_name) %></li>
