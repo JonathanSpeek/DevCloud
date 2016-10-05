@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.5'
+ruby '2.3.1'
 
 gem 'rails', '4.2.4'
 gem 'sass-rails', '~> 5.0'
@@ -20,7 +20,7 @@ gem 'omniauth-slack'
 gem 'font-awesome-sass'
 gem 'redcarpet'
 gem 'coderay'
-gem 'fog-aws'
+gem 'fog'
 gem 'figaro'
 gem 'paranoia'
 gem 'mail_form'
