@@ -18,5 +18,7 @@
 .env
 Procfile
 .idea/
+.DS_Store
+app/.DS_Store
 config/application.yml
 public/uploads/upload/
