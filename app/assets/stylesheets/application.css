@@ -29,7 +29,7 @@
 }
 
 
-@media (max-width: 580px) {
+@media (min-width: 580px) {
     .home-header {
         font-size: 7.2rem;
     }
