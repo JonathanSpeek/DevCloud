@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="394px" height="205px" viewBox="0 0 394 205" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>devcloud-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="devcloud-logo">
+            <path d="M64,205 L319,205 C360.421356,205 394,171.421356 394,130 C394,89.0327431 361.153561,55.7371831 320.359436,55.0120731 C303.233553,22.3120288 268.972403,0 229.5,0 C203.480622,0 179.725621,9.69495388 161.650327,25.6695332 C150.941586,21.3673951 139.24726,19 127,19 C85.7364749,19 50.7496103,45.8735777 38.5865312,83.073608 C15.9000089,92.7597623 0,115.273058 0,141.5 C0,176.570082 28.4299184,205 63.5,205 C63.6668177,205 63.8334851,204.999357 64,204.998073 Z" id="Combined-Shape" fill="#4A4A4A"></path>
+            <text id="&lt;/&gt;" font-family="AvenirNext-Regular, Avenir Next" font-size="144" font-weight="normal" fill="#FFF244">
+                <tspan x="74.456" y="171">&lt;/&gt;</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
