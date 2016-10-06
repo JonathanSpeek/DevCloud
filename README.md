@@ -1,10 +1,15 @@
 # DevCloud
 
 ## Features
+* User can login using Github Creds
 * User can signup
 * User can login
-* User can login using Github credentials
-* User can create, read, update, and destroy notes in Markdown
-* User can upload files relevant to dev environments
-* User can download their uploaded files
+* User can create, read, update, and destroy wikis in Markdown
+* User can upload files relevant to development
+* User can download their uploaded files 
 
+## Future Features
+* Subscription model for larger storage
+* Evernote integration
+* Markdown preview while composing
+* Markdown toolbar to help with composition
