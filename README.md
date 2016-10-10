@@ -13,3 +13,4 @@
 * Evernote integration
 * Markdown preview while composing
 * Markdown toolbar to help with composition
+* Slack Integration
