@@ -13,4 +13,5 @@
 * Evernote integration
 * Markdown preview while composing
 * Markdown toolbar to help with composition
-* Slack Integration
+* Slack integration
+* Login using Google or Github only - with Ominiauth as only option
