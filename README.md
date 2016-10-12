@@ -15,3 +15,4 @@
 * Markdown toolbar to help with composition
 * Slack integration
 * Login using Google or Github only - with Ominiauth as only option
+* Add cucumber tests for new features
