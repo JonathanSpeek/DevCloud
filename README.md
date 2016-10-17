@@ -8,11 +8,14 @@
 * User can upload files relevant to development
 * User can download their uploaded files 
 
+## Current To-Do's
+* Add Pagination for the separate sections
+* Add search functionality
+* Markdown preview while composing
+
 ## Future Features
 * Subscription model for larger storage
 * Evernote integration
-* Markdown preview while composing
 * Markdown toolbar to help with composition
 * Slack integration
-* Login using Google or Github only - with Ominiauth as only option
 * Add cucumber tests for new features
