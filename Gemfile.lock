@@ -97,6 +97,7 @@ GEM
       activesupport (>= 4.1.0)
     hashie (3.4.4)
     i18n (0.7.0)
+    interception (0.5)
     ipaddress (0.8.3)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -116,6 +117,7 @@ GEM
       activemodel (>= 3.2, < 5)
     materialize-sass (0.97.7)
       sass (~> 3.3)
+    method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -156,6 +158,18 @@ GEM
       activerecord (~> 4.0)
     pg (0.18.4)
     pkg-config (1.1.7)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-byebug (3.4.0)
+      byebug (~> 9.0)
+      pry (~> 0.10)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
+    pry-rescue (1.4.4)
+      interception (>= 0.5)
+      pry
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -207,6 +221,7 @@ GEM
     simple_form (3.2.1)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
+    slop (3.6.0)
     spring (1.7.2)
     sprockets (3.7.0)
       concurrent-ruby (~> 1.0)
@@ -255,6 +270,9 @@ DEPENDENCIES
   omniauth-slack
   paranoia
   pg
+  pry-byebug
+  pry-rails
+  pry-rescue
   rails (= 4.2.4)
   rails_12factor
   redcarpet
