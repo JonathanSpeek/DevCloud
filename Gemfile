@@ -35,6 +35,10 @@ end
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  # Replace the rails console with Pry, which is easier to use
+  gem 'pry-rails'
+  gem 'pry-rescue'
+  gem 'pry-byebug'
 end
 
 group :production do
