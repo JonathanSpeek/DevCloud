@@ -1,7 +1,7 @@
 <h2>Edit Wiki</h2>
 <%= simple_form_for @note do |f| %>
     <%= f.input :title %>
-    <%= f.input :content, input_html: {style: 'height:50em;'} %>
-    <br />
-    <%= f.submit "Save", class: 'btn yellow accent-4 grey-text text-darken-4' %>
+    <%= f.input :content, input_html: { style: 'height:50em;' } %>
+    <br/>
+    <%= f.submit 'Save', class: 'btn yellow accent-4 grey-text text-darken-4' %>
 <% end %>

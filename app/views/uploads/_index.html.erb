@@ -1,27 +1,27 @@
 <% unless @uploads.blank? %>
     <br>
     <h3>Files&nbsp&nbsp<%= link_to new_upload_path, class: 'btn-floating yellow accent-4 grey-text text-darken-4' do %>
-          <i class="material-icons grey-text text-darken-4">note_add</i>
+          <i class='material-icons grey-text text-darken-4'>note_add</i>
       <% end %></h3>
     <hr>
-<table class="highlight">
-  <thead>
-  <tr>
-    <th>File</th>
-    <th>Download</th>
-    <th>&nbsp</th>
-  </tr>
-  </thead>
-  <tbody>
-  <% @uploads.each do |upload| %>
+    <table class='highlight'>
+      <thead>
       <tr>
-        <td><%= upload.name %></td>
-        <td><%= link_to 'Download', upload.attachment_url, target: '_blank', class: 'btn yellow accent-4 grey-text text-darken-4' %></td>
-        <td><%= button_to 'Delete', upload, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn grey-text text-lighten-5 red darken-4', :onclick => "Materialize.toast('#{upload.name} Deleted', 4000)" %></td>
+        <th>File</th>
+        <th>Download</th>
+        <th>&nbsp</th>
       </tr>
-  <% end %>
-  </tbody>
-</table>
+      </thead>
+      <tbody>
+      <% @uploads.each do |upload| %>
+          <tr>
+            <td><%= upload.name %></td>
+            <td><%= link_to 'Download', upload.attachment_url, target: '_blank', class: 'btn yellow accent-4 grey-text text-darken-4' %></td>
+            <td><%= button_to 'Delete', upload, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn grey-text text-lighten-5 red darken-4', :onclick => "Materialize.toast('#{upload.name} Deleted', 4000)" %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
 <% else %>
     <br>
     <h3>Files</h3>
@@ -31,5 +31,5 @@
     <% else %>
         <p>It appears you haven't created any files yet... Lets fix that!</p>
     <% end %>
-      <%= link_to 'Add File', new_upload_path, class: 'waves-effect btn yellow accent-4 grey-text text-darken-4' %>
+    <%= link_to 'Add File', new_upload_path, class: 'waves-effect btn yellow accent-4 grey-text text-darken-4' %>
 <% end %>
