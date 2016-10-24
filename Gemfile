@@ -24,6 +24,7 @@ gem 'figaro'
 gem 'paranoia'
 gem 'mail_form'
 gem 'cancancan'
+gem 'will_paginate'
 
 group :development, :test do
   gem 'byebug'
