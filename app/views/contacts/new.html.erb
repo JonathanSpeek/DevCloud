@@ -1,15 +1,17 @@
-<div align="center">
-  <h2>DevCloud Support</h2>
-  <br />
+<div class='container'>
+  <div align='center'>
+    <h2>DevCloud Support</h2>
+    <br/>
 
-  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
-      <%= f.input :name, :required => true %>
-      <%= f.input :email, :required => true %>
-      <%= f.input :message, :as => :text, :required => true, input_html: {style: 'height:10em;'} %>
-      <div>
-        </br></br>
-        <%= f.button :submit, 'Send message', class: 'btn yellow accent-4 grey-text text-darken-4' %>
-      </div>
-  <% end %>
-  <br /><br />
+    <%= simple_form_for @contact, html: {class: 'form-horizontal'} do |f| %>
+        <%= f.input :name, required: true %>
+        <%= f.input :email, required: true %>
+        <%= f.input :message, as: :text, :required => true, input_html: {style: 'height:10em;'} %>
+        <div>
+          </br></br>
+          <%= f.button :submit, 'Send message', class: 'btn yellow accent-4 grey-text text-darken-4' %>
+        </div>
+    <% end %>
+    <br/><br/>
+  </div>
 </div>

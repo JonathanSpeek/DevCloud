@@ -7,11 +7,11 @@
       <li><%= link_to 'New Wiki', new_note_path, class: 'btn grey darken-4 yellow-text text-accent-4' %></li>
       <li><%= link_to 'Add File', new_upload_path, class: 'btn grey darken-4 yellow-text text-accent-4' %></li>
       <li><%= link_to 'Contact Us', contacts_path, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
-      <li><%= link_to 'Log Out', destroy_user_session_path, :method => :delete, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
+      <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
   <% else %>
       <li><%= link_to 'Home', root_url, class: 'btn grey darken-4 yellow-text text-accent-4' %></li>
       <li><%= link_to 'Contact Us', contacts_path, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
-      <li><%= link_to 'Sign Up', new_registration_path(resource_name), class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
-      <li><%= link_to 'Log in', new_user_session_path, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
+      <li><%= link_to 'Sign up', new_registration_path(resource_name), class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
+      <li><%= link_to 'Sign in', new_user_session_path, class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
   <% end %>
 </ul>
