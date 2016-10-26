@@ -11,10 +11,10 @@
             <div class='card yellow-text text-accent-4 grey darken-4'>
               <div class='card-content yellow-text text-accent-4'>
                 <h2><span class='card-title'><%= note.title %></span></h2>
-                <p>Last edit: <%= time_ago_in_words(note.created_at) %></p>
+                <p>Last edit: <%= time_ago_in_words(note.created_at) %> ago</p>
               </div>
               <div class='card-action'>
-                <p><a class='yellow-text text-accent-4' href="<%= (url_for [note]) %>">Read Wiki</a></p>
+                <p><a class='btn yellow accent-4 grey-text text-darken-4' href="<%= (url_for [note]) %>">Read Wiki</a></p>
               </div>
             </div>
           </div>
