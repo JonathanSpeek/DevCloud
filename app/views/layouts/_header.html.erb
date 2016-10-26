@@ -6,8 +6,7 @@
       <ul class="right hide-on-med-and-down">
         <% if user_signed_in? %>
             <% if current_user.image %>
-                <li><%= image_tag(current_user.image, class: 'circle responsive-img profile_pic', :size => '48x48', alt: current_user.name) %></li>
-                <li><a class='button' href='#' data-activates='slide-out'><i class="material-icons">menu</i></a></li>
+                <li><%= image_tag(current_user.image, 'data-activate': 'slide-out',class: 'circle responsive-img profile_pic button', size: '48x48', alt: current_user.name) %></li>
             <% else %>
                 <li><a class='button' href='#' data-activates='slide-out'><i class="material-icons">menu</i></a></li>
             <% end %>
