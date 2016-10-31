@@ -1,3 +1,6 @@
+<% if @notes.blank? %>
+    <h4>There are no wikis containing the term <%= params[:search] %>.</h4>
+<% end %>
 <br>
 <% unless @notes.blank? %>
     <br>
@@ -21,17 +24,11 @@
       <% end %>
     </div>
     <br>
-
     <%= render 'uploads/index' %>
 <% else %>
     <br>
     <h3>Wikis</h3>
     <hr>
-    <% if current_user.name %>
-        <p>It appears you haven't created any wikis yet, <%= current_user.name %>... Lets fix that!</p>
-    <% else %>
-        <p>It appears you haven't created any wikis yet... Lets fix that!</p>
-    <% end %>
     <%= link_to 'New Wiki', new_note_path, class: 'waves-effect btn yellow accent-4 grey-text text-darken-4' %>
     <br>
     <br>

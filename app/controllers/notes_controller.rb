@@ -5,6 +5,12 @@ class NotesController < ApplicationController
   def index
     @notes = Note.where(user_id: current_user)
     @uploads = Upload.where(user_id: current_user)
+
+    if params[:search]
+      @notes = Note.search(params[:search]).order('created_at DESC')
+    else
+      @notes = Note.all.order('created_at DESC')
+    end
   end
 
   def show

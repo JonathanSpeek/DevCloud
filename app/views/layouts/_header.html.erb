@@ -5,6 +5,10 @@
       <a href="#" data-activates="mobile-demo" class="button-collapse white-text"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <% if user_signed_in? %>
+            <%= form_tag(notes_path, method: 'get', id: "search-form") do %>
+                <%= text_field_tag :search, params[:search], placeholder: 'Search Wikis' %>
+                <%= submit_tag 'Search', name: nil %>
+            <% end %>
             <% if current_user.image %>
                 <li><a id="profile-pic" class='button' href='#' data-activates='slide-out'><%= image_tag(current_user.image, class: 'circle responsive-img profile_pic', size: '48x48', alt: current_user.name) %></a></li>
             <% else %>
