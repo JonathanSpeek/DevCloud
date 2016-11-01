@@ -1,2 +1,3 @@
+# WelcomeHelper
 module WelcomeHelper
 end

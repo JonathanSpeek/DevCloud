@@ -1,2 +1,3 @@
+# NotesHelper
 module NotesHelper
 end
