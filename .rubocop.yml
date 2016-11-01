@@ -1,0 +1,6 @@
+# Offense count: 53
+# Configuration parameters: AllowHeredoc, AllowURI, URISchemes.
+# URISchemes: http, https
+Metrics/LineLength:
+  Enabled: false
+  Max: 100
