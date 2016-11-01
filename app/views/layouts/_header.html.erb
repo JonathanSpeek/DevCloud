@@ -4,20 +4,22 @@
       <div class="nav-wrapper container">
         <%= link_to 'DevCloud', root_url, class: 'brand-logo yellow-text text-accent-4', id: 'logo-container' %>
         <a href="#" data-activates="mobile-demo" class="button-collapse white-text"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
+        <ul class="right hide-on-med-and-down row">
           <% if user_signed_in? %>
-              <%= form_tag(notes_path, method: 'get', id: 'search-form') do %>
-                  <li><%= text_field_tag :search, params[:search], placeholder: 'Search Wikis', class: 'input-field' %></li>
-                  <li><%= button_tag(type: 'submit', class: 'btn-floating yellow accent-4 grey-text text-darken-4') do %>
-                    <i class='material-icons grey-text text-darken-4'>search</i>
-                    <% end %></li>
-              <% end %>
               <% if current_user.image %>
-                  <li>
-                    <a id="profile-pic" class='button' href='#' data-activates='slide-out'><%= image_tag(current_user.image, class: 'circle responsive-img profile_pic', size: '48x48', alt: current_user.name) %></a>
-                  </li>
+                  <%= form_tag(notes_path, method: 'get', id: 'search-form', class: 'input-field') do %>
+                      <li><%= text_field_tag :search, params[:search], placeholder: 'Search Wikis', id: 'search' %></li>
+                      <li><%= button_tag 'Search', type: 'submit', class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
+                      <li>
+                        <a id="profile-pic" class='button' href='#' data-activates='slide-out'><%= image_tag(current_user.image, class: 'circle responsive-img profile_pic', size: '48x48', alt: current_user.name) %></a>
+                      </li>
+                  <% end %>
               <% else %>
-                  <li><a class='button' href='#' data-activates='slide-out'><i class="material-icons">menu</i></a></li>
+                  <%= form_tag(notes_path, method: 'get', id: 'search-form', class: 'input-field') do %>
+                      <li><%= text_field_tag :search, params[:search], placeholder: 'Search Wikis', id: 'search' %></li>
+                      <li><%= button_tag 'Search', type: 'submit', class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
+                      <li><a class='button' href='#' data-activates='slide-out'><i class="material-icons">menu</i></a></li>
+                  <% end %>
               <% end %>
           <% else %>
               <li><%= link_to 'Contact Us', contacts_path, class: 'white-text' %></li>
