@@ -5,7 +5,7 @@
             <li><%= image_tag(current_user.image, class: 'circle responsive-img mobile_profile_pic', size: '140x140', alt: current_user.name) %></li>
         <% end %>
         <%= form_tag(notes_path, method: 'get', id: 'search-form', class: 'input-field') do %>
-            <li><%= text_field_tag :search, params[:search], placeholder: 'Search Wikis', id: 'search' %></li>
+            <li><%= text_field_tag :search, params[:search], placeholder: 'Search Wikis', id: 'search', style: 'width: 50%;' %></li>
             <li><%= button_tag 'Search', type: 'submit', class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
             <li><%= link_to 'Home', root_url, class: 'yellow-text text-accent-4' %></li>
             <li><%= link_to 'New Wiki', new_note_path, class: 'yellow-text text-accent-4' %></li>
