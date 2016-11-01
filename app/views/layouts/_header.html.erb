@@ -6,11 +6,11 @@
         <a href="#" data-activates="mobile-demo" class="button-collapse white-text"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <% if user_signed_in? %>
-              <%= form_tag(notes_path, method: 'get', id: "search-form") do %>
-                  <%= text_field_tag :search, params[:search], placeholder: 'Search Wikis', class: 'input-field' %>
-                  <%= submit_tag do %>
-                      <i class="material-icons">search</i>
-                      <% end %>
+              <%= form_tag(notes_path, method: 'get', id: 'search-form') do %>
+                  <li><%= text_field_tag :search, params[:search], placeholder: 'Search Wikis', class: 'input-field' %></li>
+                  <li><%= button_tag(type: 'submit', class: 'btn-floating yellow accent-4 grey-text text-darken-4') do %>
+                    <i class='material-icons grey-text text-darken-4'>search</i>
+                    <% end %></li>
               <% end %>
               <% if current_user.image %>
                   <li>
