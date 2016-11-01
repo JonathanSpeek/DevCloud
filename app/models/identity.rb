@@ -1,3 +1,4 @@
+# Model for auth providers
 class Identity < ActiveRecord::Base
   belongs_to :user
 

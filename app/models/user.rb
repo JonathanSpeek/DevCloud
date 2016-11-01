@@ -1,9 +1,8 @@
+# User model
 class User < ActiveRecord::Base
   acts_as_paranoid
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:github, :slack, :google_oauth2]
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:github]
   has_many :notes
   has_many :uploads
 
