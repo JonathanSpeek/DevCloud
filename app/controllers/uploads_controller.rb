@@ -1,3 +1,4 @@
+# Controller to handle the files uploaded by users
 class UploadsController < ApplicationController
   before_action only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!

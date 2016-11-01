@@ -3,6 +3,6 @@ class Note < ActiveRecord::Base
   acts_as_paranoid
 
   def self.search(search)
-    where('title ILIKE ? OR content ILIKE ? ', "%#{search}%", "%#{search}%")
+    where('title LIKE ? OR content LIKE ? ', "%#{search}%", "%#{search}%")
   end
 end
