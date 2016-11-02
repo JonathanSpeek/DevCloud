@@ -40,6 +40,7 @@ group :development do
   gem 'pry-rescue'
   gem 'pry-byebug'
   gem 'rubocop'
+  gem 'awesome_print'
 end
 
 group :production do
