@@ -17,7 +17,7 @@ module ApplicationHelper
       lax_html_blocks: true,
       superscript: true
     }
-    markdown_to_html = Redcarpet::Markdown.new(coderayified, options).render(text).html_safe
+    markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe
   end
 
