@@ -24,6 +24,10 @@
       <% end %>
     </div>
     <br>
+    <div align="center">
+    <%= will_paginate @notes, renderer: MaterializePagination::Rails %>
+    </div>
+    <br>
     <%= render 'uploads/index' %>
 <% else %>
     <br>

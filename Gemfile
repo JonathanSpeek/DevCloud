@@ -25,6 +25,7 @@ gem 'paranoia'
 gem 'mail_form'
 gem 'cancancan'
 gem 'will_paginate'
+gem 'will_paginate-materialize'
 
 group :development, :test do
   gem 'byebug'
