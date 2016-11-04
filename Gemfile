@@ -26,6 +26,7 @@ gem 'mail_form'
 gem 'cancancan'
 gem 'will_paginate'
 gem 'will_paginate-materialize'
+gem 'markdown-toolbar'
 
 group :development, :test do
   gem 'byebug'
