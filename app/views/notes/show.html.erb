@@ -9,6 +9,6 @@
     <br/>
     <%= link_to 'Edit', edit_note_path(@note), class: 'btn yellow accent-4 grey-text text-darken-4' %>
     <br/><br/>
-    <%= button_to 'Delete', note_path(@note), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn grey-text text-lighten-5 red darken-4', :onclick => "Materialize.toast('#{@note.title} Deleted', 4000)" %>
+    <%= button_to 'Delete', note_path(@note), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn grey-text text-lighten-5 red darken-4', onclick: "Materialize.toast('#{@note.title} Deleted', 4000)" %>
   </div>
 </div>
