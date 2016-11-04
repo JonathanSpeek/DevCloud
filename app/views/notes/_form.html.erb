@@ -1,7 +1,9 @@
 <h2>Edit Wiki</h2>
 <%= simple_form_for @note do |f| %>
     <%= f.input :title %>
-    <%= f.input :content, input_html: { style: 'height:50em;', class: 'markdown-toolbar' } %>
+    <%= f.input :content, input_html: { style: 'height:50em;', class: 'markdown_preview markdown-toolbar' } %>
     <br/>
     <%= f.submit 'Save', class: 'btn yellow accent-4 grey-text text-darken-4' %>
 <% end %>
+
+<%= include_markdown_preview_if_needed %>

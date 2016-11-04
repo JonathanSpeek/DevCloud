@@ -3,6 +3,8 @@ class NotesController < ApplicationController
   before_action :find_note, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
+  uses_markdown_preview
+
   def index
     @notes = Note.where(user_id: current_user).paginate(page: params[:page], per_page: 4)
     @uploads = Upload.where(user_id: current_user)
