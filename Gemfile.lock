@@ -1,10 +1,3 @@
-GIT
-  remote: git@github.com:raderj89/markdown_preview.git
-  revision: a97cb22a6487973d51acd0606b7d859ff2126b27
-  specs:
-    markdown_preview (0.1.7)
-      rdiscount
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -125,6 +118,8 @@ GEM
       actionmailer (>= 3.2, < 5)
       activemodel (>= 3.2, < 5)
     markdown-toolbar (1.0.1)
+    markdown_preview (0.1.7)
+      rdiscount
     materialize-sass (0.97.7)
       sass (~> 3.3)
     method_source (0.8.2)
@@ -288,7 +283,7 @@ DEPENDENCIES
   jquery-rails
   mail_form
   markdown-toolbar
-  markdown_preview!
+  markdown_preview
   materialize-sass
   omniauth
   omniauth-github

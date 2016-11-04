@@ -27,7 +27,7 @@ gem 'cancancan'
 gem 'will_paginate'
 gem 'will_paginate-materialize'
 gem 'markdown-toolbar'
-gem 'markdown_preview', git: 'git@github.com:raderj89/markdown_preview.git'
+gem 'markdown_preview'
 gem 'rdiscount', '1.6.8'
 
 group :development, :test do
