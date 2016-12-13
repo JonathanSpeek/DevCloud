@@ -1,0 +1,399 @@
+/* line 1, /Users/jonathan/workspace/DevCloud/app/assets/stylesheets/custom.css.scss */
+.hidden {
+  display: none;
+}
+
+/* line 5, /Users/jonathan/workspace/DevCloud/app/assets/stylesheets/custom.css.scss */
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+/* line 12, /Users/jonathan/workspace/DevCloud/app/assets/stylesheets/custom.css.scss */
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+/* line 19, /Users/jonathan/workspace/DevCloud/app/assets/stylesheets/custom.css.scss */
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+/* line 26, /Users/jonathan/workspace/DevCloud/app/assets/stylesheets/custom.css.scss */
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+.markdown-toolbar-panel {
+  height: 26px;
+  max-width: 100% !important;
+  border: 1px solid #aaa;
+  background: #000000;
+  margin-bottom: 0;
+  border-bottom: 0;
+  overflow: hidden;
+  padding-left: 6px !important;
+}
+
+.markdown-upload-panel {
+  margin-top: 0;
+  border-top: 0;
+  padding: 5px;
+}
+
+.mdt_buttons {
+  width: auto;
+  display: inline-block;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.mdt_button {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  margin-left: 2px;
+}
+
+.mdt_button_delimiter {
+  background: url( /assets/text_delimiter-176774edd965325446b0fe8c48ec2c61bc5476d1c2569141c8ccad504c7090b8.png);
+}
+
+.mdt_button_delimiter:active {
+  background-position: 1px 1px;
+}
+
+.mdt_button_code {
+  background: url( /assets/text_code-4ecb36e97677bc565b597591a4705b0e250e3bd891db0c86c8ea1a7512aef0f9.png);
+}
+
+.mdt_button_code:active {
+  background-position: 1px 1px;
+}
+
+.mdt_button_blockquote {
+  background: url( /assets/text_blockquote-e9d34690f04a578ecde83e577be40bab52ed7fa78aa2663a24bd186a15e5a570.png);
+}
+
+.mdt_button_blockquote:active {
+  background-position: 1px 1px;
+}
+
+.mdt_button_bold {
+  background: url( /assets/text_bold-2fb65dc04959c59d3fa81e5ae9995b6f58d2aa365ff05b07ddcc9bf127c6cbd8.png);
+}
+
+.mdt_button_bold:active {
+  background-position: 1px 1px;
+}
+
+.mdt_button_italic {
+  background: url( /assets/text_italic-632c4bd03ddfa7a611a7e6405c7d469e41f6064a0ec3a815fbd0a4ce7a0158a8.png);
+}
+
+.mdt_button_italic:active {
+  background-position: 1px 1px;
+}
+
+.mdt_button_strike {
+  background: url( /assets/text_strike-b6feab281eeded75e2bcd56342da2c73d984da8244bbcbe109143426881ddacb.png);
+}
+
+.mdt_button_strike:active {
+  background-position: 1px 1px;
+}
+
+.mdt_button_list_bullets {
+  background: url( /assets/text_list_bullets-41a490fcfa80ea7eca38cf066bd45cc0f6783d2e414d82daad66085a2a4c3316.png);
+}
+
+.mdt_button_list_bullets:active {
+  background-position: 1px 1px;
+}
+
+.mdt_button_list_numbers {
+  background: url( /assets/text_list_numbers-d0d27541ff91c4481851e3909de94d1322673cf84399cccc054c447cdeed7a5f.png);
+}
+
+.mdt_button_list_numbers:active {
+  background-position: 1px 1px;
+}
+
+.mdt_button_heading_1 {
+  background: url( /assets/text_heading_1-f71177b873d9040133d753f35626d311eeab62ff3407c7ed90cc147488a43dbb.png);
+}
+
+.mdt_button_heading_1:active {
+  background-position: 1px 1px;
+}
+
+.mdt_button_heading_2 {
+  background: url( /assets/text_heading_2-cda9a91b92375375277e030a9b449d27e0330d5466bf0381119ffb21c05b84bd.png);
+}
+
+.mdt_button_heading_2:active {
+  background-position: 1px 1px;
+}
+
+.mdt_button_heading_3 {
+  background: url( /assets/text_heading_3-8e6b76a35fcd2cfbfa5cb867299dece1eef4075f09a5b0bca83c700f2478769e.png);
+}
+
+.mdt_button_heading_3:active {
+  background-position: 1px 1px;
+}
+
+.mdt_button_link {
+  background: url( /assets/text_link-141499059d1ee47d7350fa456dde5f28ad4e1f5f05050bff64f99813aae8cdaf.png);
+}
+
+.mdt_button_link:active {
+  background-position: 1px 1px;
+}
+
+.mdt_button_image {
+  background: url( /assets/text_image-43811f9568bb8d8a7956c688838f094a915d3abc48d993e6da42cb65f72751b9.png);
+}
+
+.mdt_button_image:active {
+  background-position: 1px 1px;
+}
+
+
+.mdt_button.mdt_button_delimiter {
+  cursor: inherit;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+.profile_pic {
+    margin-top: .5em;
+}
+
+.mobile_profile_pic {
+    margin-top: 20%;
+}
+
+.home-logo {
+    max-width: 50%;
+    height: auto;
+}
+
+@media (min-width: 580px) {
+    .home-header {
+        font-size: 7.2rem;
+    }
+}
+
+/* label color */
+.input-field label {
+ color: #000;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: #000;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #000 !important;
+ box-shadow: 0 1px 0 0 #000 !important;
+}
+
+nav ul a#profile-pic:hover {
+    background-color: rgba(0,0,0,0)
+}
+
+.pagination li.active {
+    background-color: #ffd600;
+    width: 25px;
+    height: 100%;
+}
+
+.pagination a {
+    color: #000000;
+}
+
+/* Markdown Editor Toolbar */
+
+.mdt_button_delimiter {
+    margin: 4px 8px 0 0;
+}
+
+.mdt_button_bold {
+    background: url(/assets/text_bold.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 13px;
+    margin: 5px 8px 0 0;
+}
+
+.mdt_button_italic {
+    background: url(/assets/text_italic.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 14px;
+    margin: 5px 8px 0 0;
+}
+
+.mdt_button_heading_1 {
+    background: url(/assets/text_heading_1.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 18px;
+    margin: 6px 8px 0 0;
+}
+
+.mdt_button_heading_2 {
+    background: url(/assets/text_heading_2.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 18px;
+    margin: 5px 8px 0 0;
+}
+
+.mdt_button_heading_3 {
+    background: url(/assets/text_heading_3.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 18px;
+    margin: 5px 8px 0 0;
+}
+
+.mdt_button_list_bullets {
+    background: url(/assets/list_bullets.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 20px;
+    margin: 3px 8px 0 0;
+}
+
+.mdt_button_list_numbers {
+    background: url(/assets/list_numbers.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 20px;
+    margin: 3px 8px 0 0;
+}
+
+.mdt_button_blockquote {
+    background: url(/assets/text_blockquote.svg);
+    background-repeat: no-repeat;
+    height: 10px;
+    width: 14px;
+    margin: 6px 8px 0 0;
+}
+
+.mdt_button_code {
+    background: url(/assets/text_code.svg);
+    background-repeat: no-repeat;
+    height: 10px;
+    width: 17px;
+    margin: 6px 8px 0 0;
+}
+
+.mdt_button_image {
+    background: url(/assets/text_image.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    margin: 3px 8px 0 0;
+}
+
+.mdt_button_link {
+    background: url(/assets/text_link.svg);
+    background-repeat: no-repeat;
+    height: 10px;
+    width: 20px;
+    margin: 6px 8px 0 0;
+}
+
+/* Markdown Editor Preview */
+
+.markdown_wrap.editing .markdown_wrap_menu_edit, .markdown_wrap.previewing .markdown_wrap_menu_preview, .markdown_wrap.helping .markdown_wrap_menu_help {
+    border: none !important;
+    border-radius: 2px !important;
+    display: inline-block !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    outline: 0 !important;
+    padding: 0 2rem !important;
+    text-transform: uppercase !important;
+    vertical-align: middle !important;
+    -webkit-tap-highlight-color: transparent !important;
+    text-decoration: none !important;
+    background-color: #ffd600 !important;
+    text-align: center !important;
+    letter-spacing: .5px !important;
+    transition: .2s ease-out !important;
+    cursor: pointer !important;
+    color: #212121 !important;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15) !important;
+}
+
+.markdown_wrap.editing .markdown_wrap_menu_preview, .markdown_wrap.previewing .markdown_wrap_menu_edit, .markdown_wrap_menu_help {
+    border: none !important;
+    border-radius: 2px !important;
+    display: inline-block !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    outline: 0 !important;
+    padding: 0 2rem !important;
+    text-transform: uppercase !important;
+    vertical-align: middle !important;
+    -webkit-tap-highlight-color: transparent !important;
+    text-decoration: none !important;
+    background-color: #ffd600 !important;
+    text-align: center !important;
+    letter-spacing: .5px !important;
+    transition: .2s ease-out !important;
+    cursor: pointer !important;
+    color: #212121 !important;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15) !important;
+}
+
+.markdown_wrap_editor {
+    margin-top: 20px !important;
+}
+
+.markdown_wrap textarea {
+    padding: 8px;
+    margin-top: 5px !important;
+}
+
+.markdown_wrap {
+    border: none !important;
+}
+
+.markdown_wrap_preview {
+    margin-top: 25px !important;
+    border: 1px solid #000 !important;
+    padding: 8px;
+}

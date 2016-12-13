@@ -1,0 +1,3 @@
+# WelcomeHelper
+module WelcomeHelper
+end

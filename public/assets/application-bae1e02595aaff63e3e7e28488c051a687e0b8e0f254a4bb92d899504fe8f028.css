@@ -1,0 +1,86 @@
+/* line 1, /Users/jonspeek/workspace/DevCloud/app/assets/stylesheets/custom.css.scss */
+.hidden {
+  display: none;
+}
+
+/* line 5, /Users/jonspeek/workspace/DevCloud/app/assets/stylesheets/custom.css.scss */
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+/* line 12, /Users/jonspeek/workspace/DevCloud/app/assets/stylesheets/custom.css.scss */
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+/* line 19, /Users/jonspeek/workspace/DevCloud/app/assets/stylesheets/custom.css.scss */
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+/* line 26, /Users/jonspeek/workspace/DevCloud/app/assets/stylesheets/custom.css.scss */
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+.profile_pic {
+    margin-top: .5em;
+}
+
+.mobile_profile_pic {
+    margin-top: 20%;
+    margin-left: 27%;
+}
+
+.home-logo {
+    max-width: 50%;
+    height: auto;
+}
+
+@media (min-width: 580px) {
+    .home-header {
+        font-size: 7.2rem;
+    }
+}
+
+/* label color */
+.input-field label {
+ color: #000;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: #000;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #000;
+ box-shadow: 0 1px 0 0 #000;
+}

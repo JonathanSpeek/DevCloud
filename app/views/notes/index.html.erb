@@ -1,0 +1,41 @@
+<% if @notes.blank? %>
+    <h4>There are no wikis containing the term <%= params[:search] %>.</h4>
+<% end %>
+<br>
+<% unless @notes.blank? %>
+    <br>
+    <h3>Wikis&nbsp&nbsp<%= link_to new_note_path, class: 'btn-floating yellow accent-4 grey-text text-darken-4' do %>
+          <i class='material-icons grey-text text-darken-4'>note_add</i>
+      <% end %></h3>
+    <hr>
+    <div class='row'>
+      <% @notes.each do |note| %>
+          <div class='col s12 m6'>
+            <div class='card yellow-text text-accent-4 grey darken-4'>
+              <div class='card-content yellow-text text-accent-4'>
+                <h2><span class='card-title'><%= note.title %></span></h2>
+                <p>Last edit: <%= time_ago_in_words(note.created_at) %> ago</p>
+              </div>
+              <div class='card-action'>
+                <p><a class='btn yellow accent-4 grey-text text-darken-4' href="<%= (url_for [note]) %>">Read Wiki</a></p>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+    <br>
+    <div align="center">
+    <%= will_paginate @notes, renderer: MaterializePagination::Rails %>
+    </div>
+    <br>
+    <%= render 'uploads/index' %>
+<% else %>
+    <br>
+    <h3>Wikis</h3>
+    <hr>
+    <%= link_to 'New Wiki', new_note_path, class: 'waves-effect btn yellow accent-4 grey-text text-darken-4' %>
+    <br>
+    <br>
+    <%= render 'uploads/index' %>
+<% end %>
+<br/><br/><br/>

@@ -1,0 +1,225 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.profile_pic {
+    margin-top: .5em;
+}
+
+.mobile_profile_pic {
+    margin-top: 20%;
+}
+
+.home-logo {
+    max-width: 50%;
+    height: auto;
+}
+
+@media (min-width: 580px) {
+    .home-header {
+        font-size: 7.2rem;
+    }
+}
+
+/* label color */
+.input-field label {
+ color: #000;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: #000;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid #000 !important;
+ box-shadow: 0 1px 0 0 #000 !important;
+}
+
+nav ul a#profile-pic:hover {
+    background-color: rgba(0,0,0,0)
+}
+
+.pagination li.active {
+    background-color: #ffd600;
+    width: 25px;
+    height: 100%;
+}
+
+.pagination a {
+    color: #000000;
+}
+
+/* Markdown Editor Toolbar */
+
+.mdt_button_delimiter {
+    margin: 4px 8px 0 0;
+}
+
+.mdt_button_bold {
+    background: url(/assets/text_bold.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 13px;
+    margin: 5px 8px 0 0;
+}
+
+.mdt_button_italic {
+    background: url(/assets/text_italic.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 14px;
+    margin: 5px 8px 0 0;
+}
+
+.mdt_button_heading_1 {
+    background: url(/assets/text_heading_1.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 18px;
+    margin: 6px 8px 0 0;
+}
+
+.mdt_button_heading_2 {
+    background: url(/assets/text_heading_2.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 18px;
+    margin: 5px 8px 0 0;
+}
+
+.mdt_button_heading_3 {
+    background: url(/assets/text_heading_3.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 18px;
+    margin: 5px 8px 0 0;
+}
+
+.mdt_button_list_bullets {
+    background: url(/assets/list_bullets.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 20px;
+    margin: 3px 8px 0 0;
+}
+
+.mdt_button_list_numbers {
+    background: url(/assets/list_numbers.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 20px;
+    margin: 3px 8px 0 0;
+}
+
+.mdt_button_blockquote {
+    background: url(/assets/text_blockquote.svg);
+    background-repeat: no-repeat;
+    height: 10px;
+    width: 14px;
+    margin: 6px 8px 0 0;
+}
+
+.mdt_button_code {
+    background: url(/assets/text_code.svg);
+    background-repeat: no-repeat;
+    height: 10px;
+    width: 17px;
+    margin: 6px 8px 0 0;
+}
+
+.mdt_button_image {
+    background: url(/assets/text_image.svg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+    margin: 3px 8px 0 0;
+}
+
+.mdt_button_link {
+    background: url(/assets/text_link.svg);
+    background-repeat: no-repeat;
+    height: 10px;
+    width: 20px;
+    margin: 6px 8px 0 0;
+}
+
+/* Markdown Editor Preview */
+
+.markdown_wrap.editing .markdown_wrap_menu_edit, .markdown_wrap.previewing .markdown_wrap_menu_preview, .markdown_wrap.helping .markdown_wrap_menu_help {
+    border: none !important;
+    border-radius: 2px !important;
+    display: inline-block !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    outline: 0 !important;
+    padding: 0 2rem !important;
+    text-transform: uppercase !important;
+    vertical-align: middle !important;
+    -webkit-tap-highlight-color: transparent !important;
+    text-decoration: none !important;
+    background-color: #ffd600 !important;
+    text-align: center !important;
+    letter-spacing: .5px !important;
+    transition: .2s ease-out !important;
+    cursor: pointer !important;
+    color: #212121 !important;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15) !important;
+}
+
+.markdown_wrap.editing .markdown_wrap_menu_preview, .markdown_wrap.previewing .markdown_wrap_menu_edit, .markdown_wrap_menu_help {
+    border: none !important;
+    border-radius: 2px !important;
+    display: inline-block !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    outline: 0 !important;
+    padding: 0 2rem !important;
+    text-transform: uppercase !important;
+    vertical-align: middle !important;
+    -webkit-tap-highlight-color: transparent !important;
+    text-decoration: none !important;
+    background-color: #ffd600 !important;
+    text-align: center !important;
+    letter-spacing: .5px !important;
+    transition: .2s ease-out !important;
+    cursor: pointer !important;
+    color: #212121 !important;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15) !important;
+}
+
+.markdown_wrap_editor {
+    margin-top: 20px !important;
+}
+
+.markdown_wrap textarea {
+    padding: 8px;
+    margin-top: 5px !important;
+}
+
+.markdown_wrap {
+    border: none !important;
+}
+
+.markdown_wrap_preview {
+    margin-top: 25px !important;
+    border: 1px solid #000 !important;
+    padding: 8px;
+}
+
+.markdown_wrap_help {
+    margin-top: 25px;
+    color: #ffd600 !important;
+    background-color: #000 !important;
+}
