@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   end
 
   root 'welcome#index'
+  get '/prices' => 'welcome#prices'
 
   match '/contacts', to: 'contacts#new', via: 'get'
   resources 'contacts', only: [:new, :create]
