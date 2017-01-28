@@ -10,6 +10,7 @@
             <li><%= link_to 'Home', root_url, class: 'yellow-text text-accent-4' %></li>
             <li><%= link_to 'New Wiki', new_note_path, class: 'yellow-text text-accent-4' %></li>
             <li><%= link_to 'Add File', new_upload_path, class: 'yellow-text text-accent-4' %></li>
+            <li><%= link_to 'Settings', edit_user_registration_path, class: 'yellow-text text-accent-4' %></li>
             <li><%= link_to 'Contact Us', contacts_path, class: 'yellow-text text-accent-4' %></li>
             <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'yellow-text text-accent-4' %></li>
         <% end %>
