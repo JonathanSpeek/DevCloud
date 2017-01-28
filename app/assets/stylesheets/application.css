@@ -223,3 +223,8 @@ nav ul a#profile-pic:hover {
     color: #ffd600 !important;
     background-color: #000 !important;
 }
+
+.page-header-prices {
+    background-color: #ffd600;
+    width: 100% !important;
+}
