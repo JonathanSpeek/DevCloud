@@ -26,10 +26,5 @@
     <br>
     <h3>Files</h3>
     <hr>
-    <% if current_user.name %>
-        <p>It appears you haven't created any files yet, <%= current_user.name %>... Lets fix that!</p>
-    <% else %>
-        <p>It appears you haven't created any files yet... Lets fix that!</p>
-    <% end %>
     <%= link_to 'Add File', new_upload_path, class: 'waves-effect btn yellow accent-4 grey-text text-darken-4' %>
 <% end %>
