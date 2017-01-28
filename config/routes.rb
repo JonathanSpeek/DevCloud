@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   resources :notes
   resources :uploads
+  resources :charges
 
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
