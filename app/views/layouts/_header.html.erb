@@ -8,7 +8,7 @@
           <% if user_signed_in? %>
               <% if current_user.image %>
                   <%= form_tag(notes_path, method: 'get', id: 'search-form', class: 'input-field') do %>
-                      <li><%= text_field_tag :search, params[:search], placeholder: 'Search Wikis', id: 'search' %></li>
+                      <li><%= text_field_tag :search, params[:search], placeholder: 'Search Wikis...', id: 'search' %></li>
                       <li><%= button_tag 'Search', type: 'submit', class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
                       <li>
                         <a id="profile-pic" class='button' href='#' data-activates='slide-out'><%= image_tag(current_user.image, class: 'circle responsive-img profile_pic', size: '48x48', alt: current_user.name) %></a>
@@ -16,7 +16,7 @@
                   <% end %>
               <% else %>
                   <%= form_tag(notes_path, method: 'get', id: 'search-form', class: 'input-field') do %>
-                      <li><%= text_field_tag :search, params[:search], placeholder: 'Search Wikis', id: 'search' %></li>
+                      <li><%= text_field_tag :search, params[:search], placeholder: 'Search Wikis...', id: 'search' %></li>
                       <li><%= button_tag 'Search', type: 'submit', class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
                       <li><a class='button' href='#' data-activates='slide-out'><i class="material-icons">menu</i></a></li>
                   <% end %>

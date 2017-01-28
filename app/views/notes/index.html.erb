@@ -1,7 +1,3 @@
-<% if @notes.blank? %>
-    <h4>There are no wikis containing the term <%= params[:search] %>.</h4>
-<% end %>
-<br>
 <% unless @notes.blank? %>
     <br>
     <h3>Wikis&nbsp&nbsp<%= link_to new_note_path, class: 'btn-floating yellow accent-4 grey-text text-darken-4' do %>
