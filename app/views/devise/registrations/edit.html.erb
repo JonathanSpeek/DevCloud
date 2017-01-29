@@ -7,6 +7,7 @@
         <% if current_user.image %>
           <%= image_tag(current_user.image, class: 'circle responsive-img mobile_profile_pic', :size => '140x140', alt: current_user.name) %>
         <% end %>
+        <h5><%= current_user.name %></h5>
 
         <div class="input-field">
           <h5>Edit Email</h5>
