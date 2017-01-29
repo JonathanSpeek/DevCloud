@@ -15,6 +15,8 @@ class UploadsController < ApplicationController
     @upload = current_user.uploads.new(upload_params)
 
     if @upload.save
+      current_user.total_data = Upload.all.where(user_id: current_user).sum(:size).to_i
+      current_user.save
       redirect_to notes_path, notice: "The file #{@upload.name} has been uploaded."
     else
       render 'new'
@@ -25,6 +27,8 @@ class UploadsController < ApplicationController
     @upload = Upload.find(params[:id])
     if @upload.present?
       @upload.destroy
+      current_user.total_data = Upload.all.where(user_id: current_user).sum(:size).to_i
+      current_user.save
     end
     redirect_to notes_path
   end
@@ -33,9 +37,5 @@ class UploadsController < ApplicationController
 
   def upload_params
     params.require(:upload).permit(:name, :attachment, :content_type, :size)
-  end
-
-  def total_data_check
-    @total_data = Upload.all.where(user_id: current_user).sum(:size)
   end
 end

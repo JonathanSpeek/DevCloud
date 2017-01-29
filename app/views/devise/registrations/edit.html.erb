@@ -43,7 +43,8 @@
 <div class="col s6">
   <div class="card-panel" align="center">
     <h5>Current Data Usage</h5>
-    <%= column_chart ({'Data Used' => current_user.total_data, 'Data Available' => 5000000000 - current_user.total_data}), colors: ['black'], label: 'Bytes', ytitle: 'Gigabytes', max: 5000000000 %>
+    <% @total_data = Upload.all.where(user_id: current_user).sum(:size).to_i %>
+    <%= column_chart ({'Data Used' => @total_data, 'Data Available' => 5000000000 - @total_data}), colors: ['black'], label: 'Bytes', ytitle: 'Gigabytes', max: 5000000000 %>
   </div>
 </div>
 
