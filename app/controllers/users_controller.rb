@@ -2,7 +2,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-  after_initialize do
+  def after_initialize
     self[:total_data] = 0
   end
 
