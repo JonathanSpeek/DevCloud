@@ -11,8 +11,6 @@ class NotesController < ApplicationController
 
     if params[:search]
       @notes = Note.search(params[:search]).order('created_at DESC').paginate(page: params[:page], per_page: 4)
-    else
-      @notes = Note.all.order('created_at DESC').paginate(page: params[:page], per_page: 4)
     end
   end
 
