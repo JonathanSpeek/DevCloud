@@ -7,8 +7,9 @@
     <table class='highlight'>
       <thead>
       <tr>
-        <th>File</th>
+        <th>Name</th>
         <th>Download</th>
+        <th>Size</th>
         <th>&nbsp</th>
       </tr>
       </thead>
@@ -17,6 +18,7 @@
           <tr>
             <td><%= upload.name %></td>
             <td><%= link_to 'Download', upload.attachment_url, target: '_blank', class: 'btn yellow accent-4 grey-text text-darken-4' %></td>
+            <td><%= number_to_human_size(upload.size.to_i) %></td>
             <td><%= button_to 'Delete', upload, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn grey-text text-lighten-5 red darken-4', onclick: "Materialize.toast('#{upload.name} Deleted', 4000)" %></td>
           </tr>
       <% end %>
