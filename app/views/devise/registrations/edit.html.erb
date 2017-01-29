@@ -1,46 +1,48 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
-  <%= f.error_notification %>
-  <h2>User Settings</h2>
-  <div class="row">
-    <div class="col s6">
-      <div class="card-panel">
-        <% if current_user.image %>
-          <%= image_tag(current_user.image, class: 'circle responsive-img mobile_profile_pic', :size => '140x140', alt: current_user.name) %>
-        <% end %>
-        <h5><%= current_user.name %></h5>
-
-        <div class="input-field">
-          <h5>Edit Email</h5>
-          <%= f.input :email, required: true, label: false %>
-
-          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-              <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+    <%= f.error_notification %>
+    <h2>User Settings</h2>
+    <div class="row">
+      <div class="col s6">
+        <div class="card-panel">
+          <% if current_user.image %>
+            <div class="center" style="margin-bottom: 60px;">
+              <%= image_tag(current_user.image, class: 'circle responsive-img', size: '140x140', alt: current_user.name) %>
+              <h5><%= current_user.name %></h5>
+            </div>
           <% end %>
-        </div>
 
-        <div class="input-field">
-          <%= f.input :current_password, required: true, placeholder: '*Current Password', label: false %>
-        </div>
+          <div class="input-field">
+            <h5>Edit Email</h5>
+            <%= f.input :email, required: true, label: false %>
 
-        <div class="input-field">
-          <h5>Change Password</h5>
-          <%= f.input :password, required: false, placeholder: 'New Password', label: false %>
-        </div>
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+            <% end %>
+          </div>
 
-        <div class="input-field">
-          <%= f.input :password_confirmation, required: false, placeholder: 'Confirm Password', label: false %>
-        </div>
+          <div class="input-field">
+            <%= f.input :current_password, required: true, placeholder: '*Current Password', label: false %>
+          </div>
 
-      <%= f.button :submit, 'Save', class: 'btn grey darken-4 yellow-text text-accent-4' %>
-    </div>
-  </div>
+          <div class="input-field">
+            <h5>Change Password</h5>
+            <%= f.input :password, required: false, placeholder: 'New Password', label: false %>
+          </div>
+
+          <div class="input-field">
+            <%= f.input :password_confirmation, required: false, placeholder: 'Confirm Password', label: false %>
+          </div>
+
+          <%= f.button :submit, 'Save', class: 'btn grey darken-4 yellow-text text-accent-4' %>
+        </div>
+      </div>
 <% end %>
 
-  <div class="col s6">
-    <div class="card-panel">
-      <h5>Danger Zone!</h5>
-      <p>Unhappy, let us know! <%= link_to 'Contact Us', contacts_path, class: 'yellow-text text-accent-4' %></p>
-      <p><%= link_to 'Cancel my account', registration_path(resource_name), data: {confirm: 'Are you sure?'}, method: :delete, class: 'btn red accent-4 white-text' %></p>
-    </div>
+<div class="col s6">
+  <div class="card-panel">
+    <h5>Danger Zone!</h5>
+    <p>Unhappy, let us know! <%= link_to 'Contact Us', contacts_path, class: 'yellow-text text-accent-4' %></p>
+    <p><%= link_to 'Cancel my account', registration_path(resource_name), data: {confirm: 'Are you sure?'}, method: :delete, class: 'btn red accent-4 white-text' %></p>
   </div>
+</div>
 </div>
