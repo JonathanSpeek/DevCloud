@@ -2,6 +2,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  after_initialize do
+    self[:total_data] = 0
+  end
+
   # GET /users/:id.:format
   def show
     # authorize! :read, @user
