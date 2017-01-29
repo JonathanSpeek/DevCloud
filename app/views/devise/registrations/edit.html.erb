@@ -5,7 +5,7 @@
     <div class="col s6">
       <div class="card-panel">
         <% if current_user.image %>
-            <li><%= image_tag(current_user.image, class: 'circle responsive-img mobile_profile_pic', :size => '140x140', alt: current_user.name) %></li>
+          <%= image_tag(current_user.image, class: 'circle responsive-img mobile_profile_pic', :size => '140x140', alt: current_user.name) %>
         <% end %>
 
         <div class="input-field">
