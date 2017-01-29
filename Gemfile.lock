@@ -52,6 +52,7 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
+    chartkick (1.4.2)
     coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -286,6 +287,7 @@ DEPENDENCIES
   byebug
   cancancan
   carrierwave
+  chartkick
   coderay
   coffee-rails (~> 4.1.0)
   devise
