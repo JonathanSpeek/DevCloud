@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170129025148) do
+ActiveRecord::Schema.define(version: 20170129055145) do
 
   create_table "coupons", force: :cascade do |t|
     t.string   "code"
@@ -97,7 +97,7 @@ ActiveRecord::Schema.define(version: 20170129025148) do
     t.string   "image"
     t.string   "name"
     t.string   "subscription"
-    t.integer  "total_data"
+    t.integer  "total_data",             default: 0
   end
 
   add_index "users", ["deleted_at"], name: "index_users_on_deleted_at"
