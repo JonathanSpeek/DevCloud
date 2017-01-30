@@ -16,9 +16,10 @@ class UploadsController < ApplicationController
 
     if @upload.save
       total_data
-      redirect_to notes_path, notice: "The file #{@upload.name} has been uploaded."
+      redirect_to notes_path
+
     else
-      render 'new'
+      redirect_to(:back)
     end
   end
 
