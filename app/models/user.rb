@@ -1,7 +1,7 @@
 # User model
 class User < ActiveRecord::Base
   acts_as_paranoid
-  devise :database_authenticatable, :registerable,
+  devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:github]
   has_many :notes
   has_many :uploads

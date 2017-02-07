@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'simple_form'
 gem 'devise'
+gem 'devise_invitable', '~> 1.7.0'
 gem 'materialize-sass'
 gem 'omniauth'
 gem 'carrierwave'
