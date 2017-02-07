@@ -18,6 +18,7 @@ gem 'omniauth-google-oauth2', '~> 0.2.1'
 gem 'omniauth-github'
 gem 'stripe'
 gem 'chartkick'
+gem "administrate", "~> 0.3.0"
 gem 'font-awesome-sass'
 gem 'redcarpet'
 gem 'coderay'
