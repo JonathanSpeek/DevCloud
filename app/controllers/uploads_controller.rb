@@ -41,11 +41,11 @@ class UploadsController < ApplicationController
   def total_data
     total = 0
     uploads = Upload.all.where(user_id: current_user)
-      uploads.each do |upload|
-        if upload.present?
-          total += upload.size.to_i
-        end
+    uploads.each do |upload|
+      if upload.present?
+        total += upload.size.to_i
       end
+    end
     current_user.total_data = total
     current_user.save
   end
