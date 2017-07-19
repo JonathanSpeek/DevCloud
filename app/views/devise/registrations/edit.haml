@@ -1,0 +1,39 @@
+= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put} ) do |f|
+  = f.error_notification
+  .center
+    %h2 User Settings
+  .row
+    .col.s6
+      .card-panel
+        - if current_user.image
+          .center{ style: 'margin-bottom: 60px;' }
+            = image_tag(current_user.image, class: 'circle responsive-img', size: '140x140', alt: current_user.name)
+            %h5= current_user.name
+        .input-field
+          %h5 Edit Email
+          = f.input :email, required: true, label: false
+
+        - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+          %p= "Currently waiting confirmation for: #{resource.unconfirmed_email}"
+
+        .input-field
+          = f.input :current_password, required: true, placeholder: '*Current Password', label: false
+
+        .input-field
+          %h5 Change Password
+          = f.input :password, required: false, placeholder: 'New Password', label: false
+
+        .input-field
+          = f.input :password_confirmation, required: false, placeholder: 'Confirm Password', label: false
+
+        = f.button :submit, 'Save', class: 'btn grey-text text-darken-4 yellow accent-4'
+
+    .col.s6
+      .card-panel.center
+        %h5 Current Data Usage
+        = column_chart ({ 'Data Used': current_user.total_data, 'Data Available': (5000000000 - current_user.total_data) }), colors: ['black'], label: 'Bytes', ytitle: 'GB', max: 5000000000
+
+    .col.s6
+      .card-panel.center
+        %h5 Danger Zone!
+        = link_to 'Cancel my account', registration_path(resource_name), data: {confirm: 'Are you sure?'}, method: :delete, class: 'btn red accent-4 white-text'
