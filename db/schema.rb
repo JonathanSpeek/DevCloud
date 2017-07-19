@@ -13,13 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20170207155452) do
 
-  create_table "coupons", force: :cascade do |t|
-    t.string   "code"
-    t.string   "free_trial_length"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-  end
-
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "provider"
@@ -40,30 +33,6 @@ ActiveRecord::Schema.define(version: 20170207155452) do
   end
 
   add_index "notes", ["deleted_at"], name: "index_notes_on_deleted_at"
-
-  create_table "plans", force: :cascade do |t|
-    t.string   "name"
-    t.string   "stripe_id"
-    t.float    "price"
-    t.string   "interval"
-    t.text     "features"
-    t.boolean  "highlight"
-    t.integer  "display_order"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  create_table "subscriptions", force: :cascade do |t|
-    t.string   "stripe_id"
-    t.integer  "plan_id"
-    t.string   "last_four"
-    t.integer  "coupon_id"
-    t.string   "card_type"
-    t.float    "current_price"
-    t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
 
   create_table "uploads", force: :cascade do |t|
     t.string   "name"
