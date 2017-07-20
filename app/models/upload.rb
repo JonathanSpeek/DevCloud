@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Uploads model
 class Upload < ActiveRecord::Base
   acts_as_paranoid
@@ -6,20 +7,16 @@ class Upload < ActiveRecord::Base
 
   before_save :data_limit_check
 
-  FREE = 5000000000
-  PREMIUM = 10000000000
+  FREE = 5_000_000_000
+  PREMIUM = 10_000_000_000
 
   def data_limit_check
     size = self.size.to_i
     total_size_after = user.total_data + size
-    if user.subscription =='free'
-      if FREE <= total_size_after
-        false
-      end
-    elsif user.subscription =='premium'
-      if PREMIUM <= total_size_after
-        false
-      end
+    if user.subscription == 'free'
+      false if FREE <= total_size_after
+    elsif user.subscription == 'premium'
+      false if PREMIUM <= total_size_after
     else
       false
     end

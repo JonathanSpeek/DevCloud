@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Controller to handle the files uploaded by users
 class UploadsController < ApplicationController
   before_action only: [:show, :edit, :update, :destroy]
@@ -42,9 +43,7 @@ class UploadsController < ApplicationController
     total = 0
     uploads = Upload.all.where(user_id: current_user)
     uploads.each do |upload|
-      if upload.present?
-        total += upload.size.to_i
-      end
+      total += upload.size.to_i if upload.present?
     end
     current_user.total_data = total
     current_user.save

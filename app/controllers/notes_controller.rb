@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Controller to handle notes AKA wikis
 class NotesController < ApplicationController
   before_action :find_note, only: [:show, :edit, :update, :destroy]
@@ -9,9 +10,9 @@ class NotesController < ApplicationController
     @notes = Note.where(user_id: current_user).paginate(page: params[:page], per_page: 4)
     @uploads = Upload.where(user_id: current_user)
 
-    if params[:search]
-      @notes = Note.search(params[:search]).order('created_at DESC').paginate(page: params[:page], per_page: 4)
-    end
+    @notes = if params[:search]
+               Note.search(params[:search]).order('created_at DESC').paginate(page: params[:page], per_page: 4)
+             end
   end
 
   def show

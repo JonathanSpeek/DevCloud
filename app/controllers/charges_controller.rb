@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+# Charges Controller
 class ChargesController < ApplicationController
   def new
   end
@@ -7,15 +9,15 @@ class ChargesController < ApplicationController
     @amount = 999
 
     customer = Stripe::Customer.create(
-        email: params[:stripeEmail],
-        source: params[:stripeToken]
+      email: params[:stripeEmail],
+      source: params[:stripeToken]
     )
 
-    charge = Stripe::Charge.create(
-        customer: customer.id,
-        amount: @amount,
-        description: 'DevCloud monthly subscription',
-        currency: 'usd'
+    @charge = Stripe::Charge.create(
+      customer: customer.id,
+      amount: @amount,
+      description: 'DevCloud monthly subscription',
+      currency: 'usd'
     )
 
   rescue Stripe::CardError => e

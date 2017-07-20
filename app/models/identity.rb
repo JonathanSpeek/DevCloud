@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Model for auth providers
 class Identity < ActiveRecord::Base
   belongs_to :user
