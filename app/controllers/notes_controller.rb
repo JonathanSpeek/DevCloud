@@ -10,9 +10,7 @@ class NotesController < ApplicationController
     @notes = Note.where(user_id: current_user).paginate(page: params[:page], per_page: 4)
     @uploads = Upload.where(user_id: current_user)
 
-    @notes = if params[:search]
-               Note.search(params[:search]).order('created_at DESC').paginate(page: params[:page], per_page: 4)
-             end
+    @notes = Note.search(params[:search]).order('created_at DESC').paginate(page: params[:page], per_page: 4) if params[:search]
   end
 
   def show
