@@ -1,0 +1,38 @@
+- unless @notes.blank?
+  %br
+  %h3
+    Notes
+    = link_to  new_note_path, class: 'btn-floating yellow accent-4 grey-text text-darken-4' do
+      %i.material-icons.grey-text.text-darken-4 note_add
+  %hr
+  .row
+    - @notes.each do |note|
+      .col.s12.m6
+        .card.yellow-text.text-accent-4.grey.darken-4
+          .card-content.yellow-text.text-accent-4
+            %h2
+              %span.card-title= note.title
+            %p
+              Last edit:
+              = time_ago_in_words(note.created_at)
+              ago
+            .card-action
+              %p
+                %a.btn.yellow.accent-4.grey-text.text-darken-4{ href: "#{url_for [note]}" } Read Note
+
+  %br
+  .center
+  = will_paginate @notes, renderer: MaterializePagination::Rails
+  %br
+  = render 'uploads/index'
+- else
+  %br
+  %h3 Wikis
+  %hr
+  = link_to 'New Wiki', new_note_path, class: 'waves-effect btn yellow accent-4 grey-text text-darken-4'
+  %br>
+  %br>
+  = render 'uploads/index'
+%br
+%br
+%br
