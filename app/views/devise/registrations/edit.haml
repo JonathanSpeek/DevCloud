@@ -32,7 +32,7 @@
     .col.s6
       .card-panel.center
         %h5 Current Data Usage
-        = column_chart ({ 'Data Used': current_user.total_data, 'Data Available': (5000000000 - current_user.total_data) }), colors: ['black'], label: 'Bytes', ytitle: 'GB', max: 5000000000
+        = column_chart ({ :'Data Used' => current_user.total_data, :'Data Available' => 5000000000 - current_user.total_data }), colors: ['black'], label: 'Bytes', ytitle: 'GB', max: 5000000000
 
     .col.s6
       .card-panel.center
