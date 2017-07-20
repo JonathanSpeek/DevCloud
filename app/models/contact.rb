@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Contact Model for mailer
 class Contact < MailForm::Base
   attribute :name, validate: true

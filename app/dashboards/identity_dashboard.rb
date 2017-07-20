@@ -1,4 +1,5 @@
-require "administrate/base_dashboard"
+# frozen_string_literal: true
+require 'administrate/base_dashboard'
 
 class IdentityDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -13,7 +14,7 @@ class IdentityDashboard < Administrate::BaseDashboard
     provider: Field::String,
     uid: Field::String,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -25,7 +26,7 @@ class IdentityDashboard < Administrate::BaseDashboard
     :user,
     :id,
     :provider,
-    :uid,
+    :uid
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -36,7 +37,7 @@ class IdentityDashboard < Administrate::BaseDashboard
     :provider,
     :uid,
     :created_at,
-    :updated_at,
+    :updated_at
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -45,7 +46,7 @@ class IdentityDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :user,
     :provider,
-    :uid,
+    :uid
   ].freeze
 
   # Overwrite this method to customize how identities are displayed

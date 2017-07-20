@@ -1,4 +1,5 @@
-require "administrate/base_dashboard"
+# frozen_string_literal: true
+require 'administrate/base_dashboard'
 
 class UploadDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -16,7 +17,7 @@ class UploadDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime,
     deleted_at: Field::DateTime,
     content_type: Field::String,
-    size: Field::String,
+    size: Field::String
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -28,7 +29,7 @@ class UploadDashboard < Administrate::BaseDashboard
     :user,
     :id,
     :name,
-    :attachment,
+    :attachment
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -42,7 +43,7 @@ class UploadDashboard < Administrate::BaseDashboard
     :updated_at,
     :deleted_at,
     :content_type,
-    :size,
+    :size
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -54,7 +55,7 @@ class UploadDashboard < Administrate::BaseDashboard
     :attachment,
     :deleted_at,
     :content_type,
-    :size,
+    :size
   ].freeze
 
   # Overwrite this method to customize how uploads are displayed

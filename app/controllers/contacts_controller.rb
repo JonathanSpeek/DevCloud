@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Controller to handle mailer
 class ContactsController < ApplicationController
   def new

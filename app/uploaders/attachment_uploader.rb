@@ -1,6 +1,8 @@
+# frozen_string_literal: true
 # AttachmentUploader for CarrierWave
 require 'carrierwave/processing/mime_types'
 
+# Upload files
 class AttachmentUploader < CarrierWave::Uploader::Base
   include CarrierWave::MimeTypes
 

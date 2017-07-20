@@ -1,4 +1,5 @@
-require "administrate/base_dashboard"
+# frozen_string_literal: true
+require 'administrate/base_dashboard'
 
 class NoteDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -14,7 +15,7 @@ class NoteDashboard < Administrate::BaseDashboard
     content: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    deleted_at: Field::DateTime,
+    deleted_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -26,7 +27,7 @@ class NoteDashboard < Administrate::BaseDashboard
     :user,
     :id,
     :title,
-    :content,
+    :content
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -38,7 +39,7 @@ class NoteDashboard < Administrate::BaseDashboard
     :content,
     :created_at,
     :updated_at,
-    :deleted_at,
+    :deleted_at
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -48,7 +49,7 @@ class NoteDashboard < Administrate::BaseDashboard
     :user,
     :title,
     :content,
-    :deleted_at,
+    :deleted_at
   ].freeze
 
   # Overwrite this method to customize how notes are displayed

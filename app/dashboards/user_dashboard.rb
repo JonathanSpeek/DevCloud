@@ -1,4 +1,5 @@
-require "administrate/base_dashboard"
+# frozen_string_literal: true
+require 'administrate/base_dashboard'
 
 class UserDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -29,7 +30,7 @@ class UserDashboard < Administrate::BaseDashboard
     image: Field::String,
     name: Field::String,
     subscription: Field::String,
-    total_data: Field::Number,
+    total_data: Field::Number
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -41,7 +42,7 @@ class UserDashboard < Administrate::BaseDashboard
     :notes,
     :uploads,
     :id,
-    :email,
+    :email
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -68,7 +69,7 @@ class UserDashboard < Administrate::BaseDashboard
     :image,
     :name,
     :subscription,
-    :total_data,
+    :total_data
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -93,7 +94,7 @@ class UserDashboard < Administrate::BaseDashboard
     :image,
     :name,
     :subscription,
-    :total_data,
+    :total_data
   ].freeze
 
   # Overwrite this method to customize how users are displayed
