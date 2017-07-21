@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-# Controller to handle notes AKA wikis
+# Controller to handle notes
 class NotesController < ApplicationController
   before_action :find_note, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
