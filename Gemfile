@@ -20,8 +20,8 @@ gem 'omniauth-google-oauth2', '~> 0.2.1'
 gem 'omniauth-github'
 gem 'stripe'
 gem 'chartkick'
-gem "administrate", "~> 0.3.0"
-gem "bourbon"
+gem 'administrate', '~> 0.3.0'
+gem 'bourbon'
 gem 'font-awesome-sass'
 gem 'redcarpet'
 gem 'coderay'
@@ -40,6 +40,13 @@ group :development, :test do
   gem 'byebug'
   gem 'sqlite3'
   gem 'foreman'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'guard-rspec'
 end
 
 group :development do
