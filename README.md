@@ -2,6 +2,7 @@
 <div align="center">
     <img style="width:500px;height:auto;" src="https://cdn.rawgit.com/JonathanSpeek/devcloud/master/devcloud-screenshot.png"/>
 </div>
+
 ## Features
 * User can login using Github or Google
 * User can create, read, update, and destroy notes in Markdown
