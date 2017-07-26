@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :users
-resources :identities
-resources :notes
-resources :uploads
+    resources :identities
+    resources :notes
+    resources :uploads
 
     root to: "users#index"
   end
