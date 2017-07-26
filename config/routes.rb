@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :notes
     resources :uploads
 
-    root to: "users#index"
+    root to: 'users#index'
   end
 
   devise_for :users, controllers: { omniauth_callbacks: 'callbacks' }
