@@ -7,10 +7,10 @@
       = f.input :password, required: false, class: 'materialize-textarea', placeholder: 'Password', label: false
 
     .form-actions.left-align
-      = f.button :submit, 'Sign in', class: 'btn yellow accent-4 grey-text text-darken-4'
+      = f.button :submit, 'Sign in', class: 'btn white-text grey darken-4'
       = link_to 'Forgot?', new_password_path(resource_name), class: 'grey-text text-darken-4'
   %br
   .left-align
     %h5 Automagically sign in with Github
-    %a.btn.yellow-text.text-accent-4.grey.darken-4{ href: 'https://devcloud1.herokuapp.com/users/auth/github' } Github
+    %a.btn.white-text.deep-purple.accent-3{ href: 'https://devcloud1.herokuapp.com/users/auth/github' } Github
 
