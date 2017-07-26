@@ -2,14 +2,22 @@
   .container.center
     %br
     %br
-    %h1.home-header.header.center.grey-text.text-darken-4 DevCloud
     %br
-    = image_tag 'devcloud-logo.png', class: 'home-logo center'
+    = image_tag 'DevCloud.svg', class: 'home-header header center'
     %br
     %br
     .row.center
-      %h5.header.col.s12.light Your personal space for notes and files of any kind
+      %h5.header.col.s12.white-text Your personal space for notes and files of any kind
+    %br
+    %br
     .row.center
-      %a.btn-large.yellow.accent-4.grey-text.text-darken-4{ href: 'https://devcloud1.herokuapp.com/users/auth/github' } Sign in with Github
+      %a.bold.btn-large.white.grey-text.text-darken-4{ href: 'https://devcloud1.herokuapp.com/users/auth/github' }
+        %i.fa.fa-github{ 'aria-hidden': true }
+        Sign in with Github
+      %br
+      %br
+      %a.bold.btn-large.white.grey-text.text-darken-4{ href: 'https://devcloud1.herokuapp.com/users/auth/google_oauth2' }
+        %i.fa.fa-google{ 'aria-hidden': true }
+        Sign in with Google
     %br
     %br

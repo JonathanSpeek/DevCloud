@@ -20,7 +20,7 @@
         %td= number_to_human_size(upload.size.to_i)
         %td
           = button_to upload_path(upload), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn-floating grey-text text-lighten-5 red darken-4', onclick: "Materialize.toast('#{upload.name} Deleted', 4000)" do
-            %i.material-icons.grey-text.text-darken-4 delete
+            %i.material-icons.white-text delete
 - else
   %br
   %h3 Files
