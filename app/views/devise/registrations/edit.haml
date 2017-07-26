@@ -1,6 +1,6 @@
 = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put} ) do |f|
   .center
-    %h2 User Settings
+    %h2.bold User Settings
   .row
     .col.s6
       .card-panel
@@ -27,7 +27,7 @@
         .input-field
           = f.input :password_confirmation, required: false, placeholder: 'Confirm Password', label: false
 
-        = f.button :submit, 'Save', class: 'btn grey-text text-darken-4 yellow accent-4'
+        = f.button :submit, 'Save', class: 'btn white-text deep-purple accent-3'
 
     .col.s6
       .card-panel.center

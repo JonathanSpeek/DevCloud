@@ -4,8 +4,8 @@
     <title>H2</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="14" font-family="Roboto-Black, Roboto" font-weight="700">
-        <text id="H2" fill="#FFD600">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !important" font-weight="700">
+        <text id="H2" fill="#FFF">
             <tspan x="0" y="11">H2</tspan>
         </text>
     </g>

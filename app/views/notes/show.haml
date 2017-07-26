@@ -4,8 +4,8 @@
       %h1= @note.title
       = markdown @note.content
   .align-left{ style: 'float:left;' }
-    = link_to edit_note_path(@note), class: 'btn-floating yellow accent-4 grey-text text-darken-4' do
-      %i.material-icons.grey-text.text-darken-4 mode_edit
+    = link_to edit_note_path(@note), class: 'btn-floating deep-purple accent-3' do
+      %i.material-icons.white-text mode_edit
   .align-left{ style: 'float:left;margin-left:10px;' }
-    = button_to note_path(@note), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn-floating grey-text text-lighten-5 red darken-4', onclick: "Materialize.toast('#{@note.title} Deleted', 4000)" do
-      %i.material-icons.grey-text.text-darken-4 delete
+    = button_to note_path(@note), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn-floating red darken-4', onclick: "Materialize.toast('#{@note.title} Deleted', 4000)" do
+      %i.material-icons.white-text delete

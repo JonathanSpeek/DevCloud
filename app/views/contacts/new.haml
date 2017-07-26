@@ -1,5 +1,5 @@
 .container.center
-  %h2 DevCloud Support
+  %h2.bold DevCloud Support
   %br
   = simple_form_for @contact, html: { class: 'form-horizontal' } do |f|
     = f.input :name, required: true, placeholder: 'Name', label: false
@@ -7,6 +7,6 @@
     = f.input :message, as: :text, required: true, input_html: { style: 'height:10em;' }, placeholder: 'Type your message...', label: false
     %br
     %br
-    = f.button :submit, 'Send message', class: 'btn yellow accent-4 grey-text text-darken-4'
+    = f.button :submit, 'Send message', class: 'btn-large white-text deep-purple accent-3'
   %br
   %br

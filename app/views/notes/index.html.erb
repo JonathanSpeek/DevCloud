@@ -1,19 +1,22 @@
 <% unless @notes.blank? %>
   <br>
-  <h3>Notes&nbsp&nbsp<%= link_to new_note_path, class: 'btn-floating yellow accent-4 grey-text text-darken-4' do %>
-    <i class='material-icons grey-text text-darken-4'>note_add</i>
-    <% end %></h3>
+  <h4 class="bold">
+    Notes&nbsp&nbsp
+    <%= link_to new_note_path do %>
+        <i class='fa fa-plus-circle deep-purple-text text-accent-3 pull-right'></i>
+    <% end %>
+  </h4>
   <hr>
   <div class='row'>
     <% @notes.each do |note| %>
       <div class='col s12 m6'>
-        <div class='card yellow-text text-accent-4 grey darken-4'>
-          <div class='card-content yellow-text text-accent-4'>
+        <div class='card white-text grey darken-4'>
+          <div class='card-content white-text'>
             <h2><span class='card-title'><%= note.title %></span></h2>
             <p>Last edit: <%= time_ago_in_words(note.created_at) %> ago</p>
           </div>
           <div class='card-action'>
-            <p><a class='btn yellow accent-4 grey-text text-darken-4' href="<%= (url_for [note]) %>">Read Note</a></p>
+            <p><a class='btn white-text deep-purple accent-3' href="<%= (url_for [note]) %>">Read Note</a></p>
           </div>
         </div>
       </div>
@@ -27,9 +30,9 @@
   <%= render 'uploads/index' %>
 <% else %>
   <br>
-  <h3>Notes</h3>
+  <h3 class="bold">Notes</h3>
   <hr>
-  <%= link_to 'New Note', new_note_path, class: 'waves-effect btn yellow accent-4 grey-text text-darken-4' %>
+  <%= link_to 'New Note', new_note_path, class: 'waves-effect btn white-text deep-purple accent-3' %>
   <br>
   <br>
   <%= render 'uploads/index' %>

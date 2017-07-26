@@ -1,9 +1,9 @@
 - unless @uploads.blank?
   %br
-  %h3
+  %h4.bold
     Files&nbsp&nbsp
-    = link_to new_upload_path, class: 'btn-floating yellow accent-4 grey-text text-darken-4' do
-      %i.material-icons.grey-text.text-darken-4
+    = link_to new_upload_path, class: 'pull-right btn-floating white-text deep-purple accent-3' do
+      %i.material-icons.white-text
         note_add
   %hr
   %table.highlight
@@ -16,13 +16,13 @@
     - @uploads.each do |upload|
       %tr
         %td= upload.name
-        %td= link_to 'Download', upload.attachment_url, target: '_blank', class: 'btn yellow accent-4 grey-text text-darken-4'
+        %td= link_to 'Download', upload.attachment_url, target: '_blank', class: 'btn white-text deep-purple accent-3'
         %td= number_to_human_size(upload.size.to_i)
         %td
-          = button_to upload_path(upload), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn-floating grey-text text-lighten-5 red darken-4', onclick: "Materialize.toast('#{upload.name} Deleted', 4000)" do
+          = button_to upload_path(upload), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn-floating white-text red darken-4', onclick: "Materialize.toast('#{upload.name} Deleted', 4000)" do
             %i.material-icons.white-text delete
 - else
   %br
-  %h3 Files
+  %h4.bold Files
   %hr
-  = link_to 'Add File', new_upload_path, class: 'waves-effect btn yellow accent-4 grey-text text-darken-4'
+  = link_to 'Add File', new_upload_path, class: 'waves-effect btn white-text deep-purple accent-3'

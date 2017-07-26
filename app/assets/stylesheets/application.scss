@@ -29,7 +29,7 @@ $white: #FFF;
   font-weight: bolder !important;
 }
 
-main {
+.main-landing {
   background: url(header.svg) no-repeat;
   top: 0;
   width: 100%;
@@ -85,7 +85,7 @@ nav ul a#profile-pic:hover {
 }
 
 .pagination li.active {
-    background-color: #ffd600;
+    background-color: #651fff;
     width: 25px;
     height: 100%;
 }
@@ -202,12 +202,12 @@ nav ul a#profile-pic:hover {
     vertical-align: middle !important;
     -webkit-tap-highlight-color: transparent !important;
     text-decoration: none !important;
-    background-color: #ffd600 !important;
+    background-color: #651fff !important;
     text-align: center !important;
     letter-spacing: .5px !important;
     transition: .2s ease-out !important;
     cursor: pointer !important;
-    color: #212121 !important;
+    color: #fff !important;
     box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15) !important;
 }
 
@@ -223,12 +223,12 @@ nav ul a#profile-pic:hover {
     vertical-align: middle !important;
     -webkit-tap-highlight-color: transparent !important;
     text-decoration: none !important;
-    background-color: #ffd600 !important;
+    background-color: #651fff !important;
     text-align: center !important;
     letter-spacing: .5px !important;
     transition: .2s ease-out !important;
     cursor: pointer !important;
-    color: #212121 !important;
+    color: #fff !important;
     box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15) !important;
 }
 
@@ -253,11 +253,16 @@ nav ul a#profile-pic:hover {
 
 .markdown_wrap_help {
     margin-top: 25px;
-    color: #ffd600 !important;
-    background-color: #000 !important;
+    color: #651fff !important;
+    background-color: #fff !important;
 }
 
 .page-header-prices {
-    background-color: #ffd600;
+    background-color: #651fff;
     width: 100% !important;
+}
+
+textarea {
+  border-radius: 8px;
+  margin-top: 10px !important;
 }

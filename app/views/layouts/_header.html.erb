@@ -2,13 +2,15 @@
   <div class="navbar-fixed">
     <nav class="grey darken-4" role="navigation">
       <div class="nav-wrapper container">
-        <%= link_to 'DevCloud', root_url, class: 'brand-logo yellow-text text-accent-4', id: 'logo-container' %>
+        <%= link_to root_url, class: 'brand-logo white-text', id: 'logo-container' do %>
+            <i class='fa fa-cloud' aria-hidden='true'></i>
+        <% end %>
         <a href="#" data-activates="mobile-demo" class="button-collapse white-text"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down row">
           <% if current_user.image %>
               <%= form_tag(notes_path, method: 'get', id: 'search-form', class: 'input-field') do %>
                   <li><%= text_field_tag :search, params[:search], placeholder: 'Search Notes...', id: 'search' %></li>
-                  <li><%= button_tag 'Search', type: 'submit', class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
+                  <li><%= button_tag 'Search', type: 'submit', class: 'btn deep-purple accent-3 white-text' %></li>
                   <li>
                     <a id="profile-pic" class='button' href='#' data-activates='slide-out'><%= image_tag(current_user.image, class: 'circle responsive-img profile_pic', size: '48x48', alt: current_user.name) %></a>
                   </li>
@@ -16,7 +18,7 @@
           <% else %>
               <%= form_tag(notes_path, method: 'get', id: 'search-form', class: 'input-field') do %>
                   <li><%= text_field_tag :search, params[:search], placeholder: 'Search Notes...', id: 'search' %></li>
-                  <li><%= button_tag 'Search', type: 'submit', class: 'btn yellow accent-4 grey-text text-darken-4' %></li>
+                  <li><%= button_tag 'Search', type: 'submit', class: 'btn deep-purple accent-3 white-text' %></li>
                   <li><a class='button' href='#' data-activates='slide-out'><i class="material-icons">menu</i></a></li>
               <% end %>
           <% end %>
