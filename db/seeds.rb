@@ -28,4 +28,21 @@ if Rails.env.development?
     create_note('Ruby Test', "```ruby\r\ndef hello\r\n    puts 'hello'\r\nend\r\n```", alpha)
     create_note('Ruby Test', "```ruby\r\ndef hello\r\n    puts 'hello'\r\nend\r\n```", beta)
     create_note('Ruby Test', "```ruby\r\ndef hello\r\n    puts 'hello'\r\nend\r\n```", gamma)
+
+    # -------------------------------------------------------------------------------------------------------------------
+    # Test uploads
+    # -------------------------------------------------------------------------------------------------------------------
+    def create_upload(name, attachment, user_id)
+      Upload.create(name: name, attachment: attachment, user_id: user_id)
+    end
+
+    puts 'Creating uploads'
+    alpha = User.where(email: 'alpha@example.com')[0].id
+    beta = User.where(email: 'beta@example.com')[0].id
+    gamma = User.where(email: 'gamma@example.com')[0].id
+    image = Rails.root.join("db/images/test.jpeg").open
+
+    create_upload('Image Test', image, alpha)
+    create_upload('Image Test', image, beta)
+    create_upload('Image Test', image, gamma)
 end
