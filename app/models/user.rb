@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 # User model
 class User < ActiveRecord::Base
-  acts_as_paranoid
   devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:github, :google_oauth2]
   has_many :notes
