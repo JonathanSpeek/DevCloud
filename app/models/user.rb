@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
 
   def after_initialize
     user.total_data = 0
-    send_admin_email(user)
   end
 
   def self.from_omniauth(auth)
@@ -20,9 +19,5 @@ class User < ActiveRecord::Base
       user.name = auth.info.name
       user.image = auth.info.image
     end
-  end
-
-  def send_admin_email(user)
-    NewUserMailer.new_user_email(user).deliver_now
   end
 end

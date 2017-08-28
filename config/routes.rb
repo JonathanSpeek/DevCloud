@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     root to: 'users#index'
   end
 
-  devise_for :users, controllers: { omniauth_callbacks: 'callbacks' }
+  devise_for :users, controllers: { omniauth_callbacks: 'callbacks',  registrations: 'registrations' }
   get 'welcome/index'
   resources :notes
   resources :uploads
