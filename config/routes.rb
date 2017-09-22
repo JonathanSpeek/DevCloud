@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
     resources :identities
+    resources :folders
     resources :notes
     resources :uploads
 
@@ -10,12 +11,13 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: 'callbacks',  registrations: 'registrations' }
   get 'welcome/index'
+  resources :folders
   resources :notes
   resources :uploads
   resources :charges
 
   devise_scope :user do
-    get '/users/sign_out' => 'devise/sessions#destroy'
+    get '/users/sign_out', to: 'devise/sessions#destroy'
   end
 
   authenticated :user do
@@ -23,7 +25,7 @@ Rails.application.routes.draw do
   end
 
   root 'welcome#index'
-  get '/prices' => 'welcome#prices'
+  get '/prices', to: 'welcome#prices'
 
   match '/contacts', to: 'contacts#new', via: 'get'
   resources 'contacts', only: [:new, :create]
