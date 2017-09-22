@@ -16,8 +16,6 @@ ActiveRecord::Schema.define(version: 20170922204815) do
   create_table "folders", force: :cascade do |t|
     t.string   "name"
     t.integer  "user_id"
-    t.integer  "note_id"
-    t.integer  "upload_id"
     t.string   "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -87,6 +85,7 @@ ActiveRecord::Schema.define(version: 20170922204815) do
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
     t.integer  "invitations_count",      default: 0
+    t.integer  "folder_id"
   end
 
   add_index "users", ["deleted_at"], name: "index_users_on_deleted_at"
