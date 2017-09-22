@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:github, :google_oauth2]
   has_many :notes
   has_many :uploads
+  has_many :folders
 
   def after_initialize
     user.total_data = 0

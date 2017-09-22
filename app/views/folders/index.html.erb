@@ -1,0 +1,35 @@
+<% unless @folders.blank? %>
+  <br>
+  <h3 class="bold">
+    Folders&nbsp&nbsp
+    <%= link_to new_folder_path do %>
+        <i class='fa fa-plus-circle deep-purple-text text-accent-3 pull-right'></i>
+    <% end %>
+  </h3>
+  <hr>
+  <div class='row'>
+    <% @folders.each do |folder| %>
+      <div class='col s12 m6'>
+        <div class='card white-text grey darken-4'>
+          <div class='card-content white-text'>
+            <h2><span class='card-title'><%= folder.name %></span></h2>
+            <p>Last edit: <%= time_ago_in_words(folder.created_at) %> ago</p>
+          </div>
+          <div class='card-action'>
+            <p><a class='btn white-text deep-purple accent-3' href="<%= (url_for [folder]) %>">Open</a></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <br>
+  <div align="center">
+  <%= will_paginate @folders, renderer: MaterializePagination::Rails %>
+  </div>
+<% else %>
+  <br>
+  <h3 class="bold">Folders</h3>
+  <hr>
+  <%= link_to 'New Folder', new_folder_path, class: 'waves-effect btn white-text deep-purple accent-3' %>
+<% end %>
+<br/><br/><br/>

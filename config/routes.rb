@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   end
 
   authenticated :user do
-    root 'notes#index', as: 'authenticated_root'
+    root 'folders#index', as: 'authenticated_root'
   end
 
   root 'welcome#index'
