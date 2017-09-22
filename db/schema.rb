@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170922195653) do
+ActiveRecord::Schema.define(version: 20170922204815) do
 
   create_table "folders", force: :cascade do |t|
     t.string   "name"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20170922195653) do
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.datetime "deleted_at"
+    t.integer  "folder_id"
   end
 
   add_index "notes", ["deleted_at"], name: "index_notes_on_deleted_at"
@@ -53,6 +54,7 @@ ActiveRecord::Schema.define(version: 20170922195653) do
     t.datetime "deleted_at"
     t.string   "content_type"
     t.string   "size"
+    t.integer  "folder_id"
   end
 
   add_index "uploads", ["deleted_at"], name: "index_uploads_on_deleted_at"

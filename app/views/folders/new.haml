@@ -1,0 +1,15 @@
+- unless @folders.blank?
+  %br
+  %h4.bold= Folders do
+    = link_to new_note_path
+    %i.fa.fa-plus-circle.deep-purple-text.text-accent-3.pull-right
+  %hr
+  .row
+    - @folders.each do |folder|
+      .col.s12.m6
+        .card.white-text.grey.darken-4
+          .card-content.white-text
+            %h2
+              %span.card-title= folder.name
+          .card-action
+            %a.btn.white-text.deep-purple.accent-3= link_to folder_path(folder)
