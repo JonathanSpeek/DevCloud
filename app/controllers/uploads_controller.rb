@@ -9,15 +9,17 @@ class UploadsController < ApplicationController
   end
 
   def new
+    @folder = Folder.find(params[:folder_id])
     @upload = current_user.uploads.new
   end
 
   def create
     @upload = current_user.uploads.new(upload_params)
+    @upload.folder_id = params[:folder_id]
 
     if @upload.save
       total_data
-      redirect_to folders_path
+      redirect_to controller: 'folders', action: 'show', id: @upload.folder_id
 
     else
       redirect_to(:back)
@@ -30,13 +32,13 @@ class UploadsController < ApplicationController
       @upload.destroy
       total_data
     end
-    redirect_to folders_path
+    redirect_to(:back)
   end
 
   private
 
   def upload_params
-    params.require(:upload).permit(:name, :attachment, :content_type, :size)
+    params.require(:upload).permit(:name, :attachment, :content_type, :size, :folder_id)
   end
 
   def total_data
