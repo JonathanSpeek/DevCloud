@@ -17,7 +17,7 @@ class UploadsController < ApplicationController
 
     if @upload.save
       total_data
-      redirect_to notes_path
+      redirect_to folders_path
 
     else
       redirect_to(:back)
@@ -30,7 +30,7 @@ class UploadsController < ApplicationController
       @upload.destroy
       total_data
     end
-    redirect_to notes_path
+    redirect_to folders_path
   end
 
   private

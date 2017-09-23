@@ -43,7 +43,7 @@ class NotesController < ApplicationController
 
   def destroy
     @note.destroy
-    redirect_to notes_path
+    redirect_to folders_path
   end
 
   private
