@@ -5,7 +5,7 @@
   <br>
   <h4 class="bold">
     Notes&nbsp&nbsp
-    <%= link_to new_note_path do %>
+    <%= link_to new_note_path(folder_id: @folder.id) do %>
         <i class='fa fa-plus-circle deep-purple-text text-accent-3 pull-right'></i>
     <% end %>
   </h4>
@@ -35,7 +35,7 @@
   <br>
   <h3 class="bold">Notes</h3>
   <hr>
-  <%= link_to 'New Note', new_note_path, class: 'waves-effect btn white-text deep-purple accent-3' %>
+  <%= link_to 'New Note', new_note_path(folder_id: @folder.id), class: 'waves-effect btn white-text deep-purple accent-3' %>
   <br>
   <br>
   <%= render 'uploads/index' %>

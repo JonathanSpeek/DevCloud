@@ -2,7 +2,7 @@
   %br
   %h4.bold
     Files&nbsp&nbsp
-    = link_to new_upload_path, class: 'pull-right btn-floating white-text deep-purple accent-3' do
+    = link_to new_upload_path(folder_id: @folder.id), class: 'pull-right btn-floating white-text deep-purple accent-3' do
       %i.material-icons.white-text
         note_add
   %hr
@@ -25,4 +25,4 @@
   %br
   %h4.bold Files
   %hr
-  = link_to 'Add File', new_upload_path, class: 'waves-effect btn white-text deep-purple accent-3'
+  = link_to 'Add File', new_upload_path(folder_id: @folder.id), class: 'waves-effect btn white-text deep-purple accent-3'

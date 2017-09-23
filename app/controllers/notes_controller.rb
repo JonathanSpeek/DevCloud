@@ -17,11 +17,13 @@ class NotesController < ApplicationController
   end
 
   def new
+    @folder = Folder.find(params[:folder_id])
     @note = current_user.notes.build
   end
 
   def create
     @note = current_user.notes.build(note_params)
+    @note.folder_id = params[:folder_id]
 
     if @note.save
       redirect_to @note
@@ -53,6 +55,6 @@ class NotesController < ApplicationController
   end
 
   def note_params
-    params.require(:note).permit(:title, :content)
+    params.require(:note).permit(:title, :content, :folder_id)
   end
 end
