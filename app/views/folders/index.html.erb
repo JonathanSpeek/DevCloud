@@ -19,7 +19,15 @@
           <tr>
             <td><%= folder.name %></td>
             <td><%= time_ago_in_words(folder.created_at) %> ago</td>
-            <td><a href="<%= (url_for [folder]) %>"><i class='fa fa-folder-open-o deep-purple-text text-accent-3'></i></a></td>
+            <td>
+              <a href="<%= (url_for [folder]) %>"><i class='fa fa-folder-open-o deep-purple-text text-accent-3'></i></a>
+              <%= link_to edit_folder_path(folder) do %>
+                  <i class='fa fa-pencil-square-o deep-purple-text text-accent-3'></i>
+              <% end %>
+              <%= link_to folder_path(folder), method: :delete, data: {confirm: 'Are you sure?'}, onclick: "Materialize.toast('#{folder.name} Deleted', 4000)" do %>
+                <i class='fa fa-trash-o deep-purple-text text-accent-3'></i>
+              <% end %>
+            </td>
           </tr>
         <% end %>
       </table>
