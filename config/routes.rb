@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :notes
   resources :uploads
   resources :charges
+  get 'search_results/index', to: 'search_results#index'
 
   devise_scope :user do
     get '/users/sign_out', to: 'devise/sessions#destroy'

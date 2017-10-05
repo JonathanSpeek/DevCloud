@@ -4,8 +4,4 @@ class Folder < ActiveRecord::Base
   belongs_to :user
   has_many :uploads
   has_many :notes
-
-  def self.search(search)
-    where('name LIKE ?', "%#{search}%", "%#{search}%")
-  end
 end
