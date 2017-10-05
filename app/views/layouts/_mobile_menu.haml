@@ -3,7 +3,7 @@
     - if user_signed_in?
       - if current_user.image
         %li= image_tag(current_user.image, class: 'circle responsive-img mobile_profile_pic', size: '140x140', alt: current_user.name)
-      = form_tag(notes_path, method: 'get', id: 'search-form', class: 'input-field') do
+      = form_tag(search_results_index_path, method: 'get', id: 'search-form', class: 'input-field') do
         %li= text_field_tag :search, params[:search], placeholder: 'Search Notes', id: 'search', style: 'width: 50%;'
         %li= button_tag 'Search', type: 'submit', class: 'btn deep-purple accent-3 white-text'
         %li= link_to 'Home', root_url, class: 'white-text'
