@@ -35,6 +35,7 @@ gem 'will_paginate-materialize'
 gem 'markdown-toolbar'
 gem 'markdown_preview'
 gem 'rdiscount', '1.6.8'
+gem 'gemoji'
 
 group :development, :test do
   gem 'byebug'

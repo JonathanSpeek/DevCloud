@@ -1,5 +1,5 @@
 - if @results.empty?
-  %h3.center.bold= "No results for: #{params[:search]}"
+  %h3.center.bold= "Sorry, not finding #{params[:search]}... #{Emoji.find_by_alias('confused').raw}"
 - else
   .section
     .row
