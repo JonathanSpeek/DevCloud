@@ -7,20 +7,23 @@
     <% end %>
   </h3>
   <hr>
-  <div class='row'>
-    <% @folders.each do |folder| %>
-      <div class='col s12 m6'>
-        <div class='card white-text grey darken-4'>
-          <div class='card-content white-text'>
-            <h2><span class='card-title'><%= folder.name %></span></h2>
-            <p>Last edit: <%= time_ago_in_words(folder.created_at) %> ago</p>
-          </div>
-          <div class='card-action'>
-            <p><a class='btn white-text deep-purple accent-3' href="<%= (url_for [folder]) %>">Open</a></p>
-          </div>
-        </div>
-      </div>
-    <% end %>
+  <div class="section">
+    <div class='row'>
+      <table class="responsive-table striped">
+        <tr>
+          <th>Folder</th>
+          <th>Last edit</th>
+          <th>Actions</th>
+        </tr>
+        <% @folders.each do |folder| %>
+          <tr>
+            <td><%= folder.name %></td>
+            <td><%= time_ago_in_words(folder.created_at) %> ago</td>
+            <td><a href="<%= (url_for [folder]) %>"><i class='fa fa-folder-open-o deep-purple-text text-accent-3'></i></a></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
   </div>
   <br>
   <div align="center">
