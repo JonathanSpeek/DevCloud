@@ -6,21 +6,26 @@
       %i.material-icons.white-text
         note_add
   %hr
-  %table.highlight
-    %thead
-    %tr
-      %th Name
-      %th Download
-      %th Size
-      %th &nbsp
-    - @uploads.each do |upload|
-      %tr
-        %td= upload.name
-        %td= link_to 'Download', upload.attachment_url, target: '_blank', class: 'btn white-text deep-purple accent-3'
-        %td= number_to_human_size(upload.size.to_i)
-        %td
-          = button_to upload_path(upload), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn-floating white-text red darken-4', onclick: "Materialize.toast('#{upload.name} Deleted', 4000)" do
-            %i.material-icons.white-text delete
+  .section
+    .row
+      %table.responsive-table.striped
+        %tr
+          %th Name
+          %th Size
+          %th Last Edit
+          %th Actions
+        - @uploads.each do |upload|
+          %tr
+            %td= upload.name
+            %td= number_to_human_size(upload.size.to_i)
+            %td= "#{time_ago_in_words(upload.created_at)} ago"
+            %td
+              = link_to upload.attachment_url, target: '_blank' do
+                %i.fa.fa-arrow-circle-o-down.deep-purple-text.text-accent-3
+              = link_to edit_upload_path(upload) do
+                %i.fa.fa-pencil-square-o.deep-purple-text.text-accent-3
+              = link_to upload_path(upload), method: :delete, data: {confirm: 'Are you sure?'}, onclick: "Materialize.toast('#{upload.name} Deleted', 4000)" do
+                %i.fa.fa-trash-o.deep-purple-text.text-accent-3
 - else
   %br
   %h4.bold Files
