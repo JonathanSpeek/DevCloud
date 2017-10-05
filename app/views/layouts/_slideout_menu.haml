@@ -3,8 +3,7 @@
     - if current_user.image
       %li= image_tag(current_user.image, class: 'circle responsive-img mobile_profile_pic', :size => '140x140', alt: current_user.name)
     %li= link_to 'Home', root_url, class: 'btn deep-purple accent-3 white-text'
-    %li= link_to 'New Note', new_note_path, class: 'btn grey darken-4 white-text'
-    %li= link_to 'Add File', new_upload_path, class: 'btn grey darken-4 white-text'
+    %li= link_to 'New Folder', new_folder_path, class: 'btn grey darken-4 white-text'
     %li= link_to 'Settings', edit_user_registration_path, class: 'btn grey darken-4 white-text'
     %li= link_to 'Contact Us', contacts_path, class: 'btn grey darken-4 white-text'
     %li= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'btn grey darken-4 white-text'
