@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
-    <title>H1</title>
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>text_heading_1</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="14" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !important" font-weight="700">
-        <text id="H1" fill="#fff">
-            <tspan x="0" y="10">H1</tspan>
-        </text>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="text_heading_1" fill="#FFFFFF">
+            <path d="M9.07128906,10 L6.68554688,10 L6.68554688,5.84375 L3.15136719,5.84375 L3.15136719,10 L0.751953125,10 L0.751953125,0.046875 L3.15136719,0.046875 L3.15136719,3.99804687 L6.68554688,3.99804687 L6.68554688,0.046875 L9.07128906,0.046875 L9.07128906,10 Z M15.5517578,10 L13.2412109,10 L13.2412109,2.64453125 L10.9716797,3.30761719 L10.9716797,1.55761719 L15.3398438,0.046875 L15.5517578,0.046875 L15.5517578,10 Z" id="H1"></path>
+        </g>
     </g>
 </svg>
