@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require materialize-sprockets
 //= require markdown-toolbar
+//= require simplemde.min
 //= require highcharts
 //= require chartkick
 //= require_tree .

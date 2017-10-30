@@ -63,12 +63,8 @@ gem 'cancancan'
 gem 'will_paginate'
 gem 'will_paginate-materialize'
 
-# Adds the toolbar used in the MD editor
-gem 'markdown-toolbar'
-
 # Handles markdown preview
-gem 'markdown_preview'
-gem 'rdiscount', '1.6.8'
+gem 'simplemde-rails'
 
 # Adds emoji support
 gem 'gemoji'
