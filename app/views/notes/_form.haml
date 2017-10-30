@@ -1,6 +1,5 @@
 %h2.bold Edit Note
 = simple_form_for @note do |f|
-  = hidden_field_tag 'folder_id', @folder.id
   = f.input :title
   = f.input :content, input_html: { style: 'height:50em;', class: 'markdown_preview markdown-toolbar' }
   %br
