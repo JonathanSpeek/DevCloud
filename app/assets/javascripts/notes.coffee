@@ -2,4 +2,4 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
-  simplemde = new SimpleMDE(autosave: { enabled: true, uniqueId: "MyUniqueID", delay: 1000 },element: document.getElementById('SimpleMDE-Text-Area'))
+  simplemde = new SimpleMDE(renderingConfig: {codeSyntaxHighlighting: true}, autosave: { enabled: true, uniqueId: "MyUniqueID", delay: 1000 },element: document.getElementById('SimpleMDE-Text-Area'))
