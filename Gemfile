@@ -9,32 +9,68 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+# Makes forms easier to create
 gem 'simple_form'
+
+# Basic authentication setup
 gem 'devise'
 gem 'devise_invitable', '~> 1.7.0'
+
+# Adds the Materialize CSS library
 gem 'materialize-sass'
+
+# Adds haml support
 gem 'haml-rails'
+
+# Adds OmniAuth
 gem 'omniauth'
-gem 'carrierwave'
 gem 'omniauth-google-oauth2', '~> 0.2.1'
 gem 'omniauth-github'
-gem 'stripe'
-gem 'chartkick'
-gem 'administrate', '~> 0.3.0'
-gem 'bourbon'
-gem 'font-awesome-sass'
-gem 'redcarpet'
-gem 'coderay'
+
+# Handles file uploads and storage
+gem 'carrierwave'
 gem 'fog-aws'
 gem 'figaro'
+
+# Processing payments
+gem 'stripe'
+
+# Library for charts
+gem 'chartkick'
+
+# Handles an admin dashboard
+gem 'administrate', '~> 0.3.0'
+
+gem 'bourbon'
+
+# Adds the Font Awesome library
+gem 'font-awesome-sass'
+
+# Handles syntax highlighting
+gem 'redcarpet'
+gem 'coderay'
+
+# Handles soft deletes
 gem 'paranoia'
+
 gem 'mail_form'
+
+# Handles permissions
 gem 'cancancan'
+
+# Handles pagination
 gem 'will_paginate'
 gem 'will_paginate-materialize'
+
+# Adds the toolbar used in the MD editor
 gem 'markdown-toolbar'
+
+# Handles markdown preview
 gem 'markdown_preview'
 gem 'rdiscount', '1.6.8'
+
+# Adds emoji support
 gem 'gemoji'
 
 group :development, :test do
