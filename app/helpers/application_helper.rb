@@ -4,6 +4,7 @@ module ApplicationHelper
   # CodeRay to render Markdown
   class CodeRayify < Redcarpet::Render::HTML
     def block_code(code, language)
+      language ||= "html"
       CodeRay.scan(code, language).div
     end
   end
