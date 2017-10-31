@@ -2,6 +2,7 @@
   %h3.center.bold= "Sorry, not finding #{params[:search]}... #{Emoji.find_by_alias('confused').raw}"
 - else
   .section
+    %h3.bold Results
     .row
       %table.responsive-table.striped
         %tr
@@ -24,12 +25,12 @@
             - if result.has_attribute?(:attachment)
               %td
                 = link_to result.attachment_url, target: '_blank' do
-                  %i.fa.fa-arrow-circle-o-down.deep-purple-text.text-accent-3
+                  %i.fa.fa-2x.fa-arrow-circle-o-down.deep-purple-text.text-accent-3
             - elsif result.has_attribute?(:name)
               %td
                 = link_to send("#{result_class}_path", result) do
-                  %i.fa.fa-folder-open-o.deep-purple-text.text-accent-3
+                  %i.fa.fa-2x.fa-folder-open-o.deep-purple-text.text-accent-3
             - else
               %td
                 = link_to send("#{result_class}_path", result) do
-                  %i.fa.fa-sticky-note-o.deep-purple-text.text-accent-3
+                  %i.fa.fa-2x.fa-sticky-note-o.deep-purple-text.text-accent-3

@@ -1,4 +1,4 @@
-<h3 class="bold">
+<h3 class="bold deep-purple-text text-accent-3">
   <%= @folder.name %>
 </h3>
 <% unless @notes.blank? %>
@@ -24,10 +24,10 @@
               <td><%= time_ago_in_words(note.created_at) %> ago</td>
               <td>
                 <%= link_to edit_note_path(note) do %>
-                    <i class='fa fa-pencil-square-o deep-purple-text text-accent-3'></i>
+                    <i class='fa fa-lg fa-pencil-square-o deep-purple-text text-accent-3'></i>
                 <% end %>
                 <%= link_to note_path(note), method: :delete, data: {confirm: 'Are you sure?'}, onclick: "Materialize.toast('#{note.title} Deleted', 4000)" do %>
-                    <i class='fa fa-trash-o deep-purple-text text-accent-3'></i>
+                    <i class='fa fa-lg fa-trash-o deep-purple-text text-accent-3'></i>
                 <% end %>
               </td>
             </tr>

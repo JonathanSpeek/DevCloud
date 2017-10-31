@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,500i,700,700i,900,900i');
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "simplemde.min";
@@ -27,7 +27,7 @@ $white: #FFF;
 }
 
 .bold {
-  font-weight: bolder !important;
+  font-weight: 900 !important;
 }
 
 .main-landing {
