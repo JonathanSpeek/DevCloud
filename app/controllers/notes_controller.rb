@@ -24,7 +24,7 @@ class NotesController < ApplicationController
     @note.folder_id = params[:folder_id]
 
     if @note.save
-      redirect_to @note
+      redirect_to controller: 'folders', action: 'show', id: @note.folder_id
     else
       render 'new'
     end
@@ -35,7 +35,7 @@ class NotesController < ApplicationController
 
   def update
     if @note.update(note_params)
-      redirect_to @note
+      redirect_to controller: 'folders', action: 'show', id: @note.folder_id
     else
       render 'edit'
     end
@@ -43,7 +43,7 @@ class NotesController < ApplicationController
 
   def destroy
     @note.destroy
-    redirect_to folders_path
+    redirect_to folders_path(@note.folder_id)
   end
 
   private
