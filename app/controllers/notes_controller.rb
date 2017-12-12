@@ -20,10 +20,8 @@ class NotesController < ApplicationController
 
   def create
     @note = current_user.notes.build(note_params)
-    @note.folder_id = params[:folder_id]
-
     if @note.save
-      redirect_to controller: 'folders', action: 'show', id: @note.folder_id
+      redirect_to controller: 'folders', action: 'show', id: params[:note][:folder_id]
     else
       render 'new'
     end
