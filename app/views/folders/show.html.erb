@@ -4,6 +4,43 @@
 <% unless @notes.blank? %>
   <br>
   <h4 class="bold">
+    Folders&nbsp&nbsp
+    <%= link_to new_folder_path(folder_id: @folder.id) do %>
+        <i class='fa fa-plus-circle deep-purple-text text-accent-3 pull-right'></i>
+    <% end %>
+  </h4>
+  <hr>
+  <div class="section">
+    <div class='row'>
+      <table class="responsive-table striped">
+        <tr>
+          <th>Folder</th>
+          <th>Last edit</th>
+          <th>Actions</th>
+        </tr>
+        <% @folders.each do |folder| %>
+          <tr>
+            <td><%= folder.name %></td>
+            <td><%= time_ago_in_words(folder.created_at) %> ago</td>
+            <td>
+              <a href="<%= (url_for [folder]) %>"><i class='fa fa-lg fa-folder-open-o deep-purple-text text-accent-3'></i></a>
+              <%= link_to edit_folder_path(folder) do %>
+                  <i class='fa fa-lg fa-pencil-square-o deep-purple-text text-accent-3'></i>
+              <% end %>
+              <%= link_to folder_path(folder), method: :delete, data: {confirm: 'Are you sure?'}, onclick: "Materialize.toast('#{folder.name} Deleted', 4000)" do %>
+                <i class='fa fa-lg fa-trash-o deep-purple-text text-accent-3'></i>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+  <br>
+<% end %>
+<% unless @notes.blank? %>
+  <br>
+  <h4 class="bold">
     Notes&nbsp&nbsp
     <%= link_to new_note_path(folder_id: @folder.id) do %>
         <i class='fa fa-plus-circle deep-purple-text text-accent-3 pull-right'></i>
