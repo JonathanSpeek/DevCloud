@@ -5,11 +5,12 @@ class FoldersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @folders = Folder.where(user_id: current_user).paginate(page: params[:page], per_page: 4)
+    @folders = Folder.where(user_id: current_user, parent_folder_id: nil).paginate(page: params[:page], per_page: 4)
     @folders = Folder.search(params[:search]).order('created_at DESC').paginate(page: params[:page], per_page: 4) if params[:search]
   end
 
   def show
+    @folders = Folder.where(user_id: current_user, parent_folder_id: @folder)
     @folder = Folder.find(params[:id])
     @notes = Note.where(user_id: current_user, folder_id: @folder).paginate(page: params[:page], per_page: 4)
     @uploads = Upload.where(user_id: current_user, folder_id: @folder)
@@ -21,7 +22,7 @@ class FoldersController < ApplicationController
 
   def create
     @folder = current_user.folders.build(folder_params)
-
+    @folder.parent_folder_id = params[:folder][:parent_folder_id]
     if @folder.save
       redirect_to @folder
     else
