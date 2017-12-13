@@ -10,7 +10,7 @@ class FoldersController < ApplicationController
   end
 
   def show
-    @folders = Folder.where(user_id: current_user, parent_folder_id: @folder)
+    @folders = Folder.where(user_id: current_user, parent_folder_id: @folder.id)
     @folder = Folder.find(params[:id])
     @notes = Note.where(user_id: current_user, folder_id: @folder).paginate(page: params[:page], per_page: 4)
     @uploads = Upload.where(user_id: current_user, folder_id: @folder)
