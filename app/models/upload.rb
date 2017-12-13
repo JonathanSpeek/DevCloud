@@ -8,6 +8,8 @@ class Upload < ActiveRecord::Base
 
   before_save :data_limit_check
 
+  validates_presence_of :name, :user_id, :folder_id, :size
+
   FREE = 5_000_000_000
   PREMIUM = 10_000_000_000
 
