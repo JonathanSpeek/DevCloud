@@ -2,9 +2,8 @@
   %br
   %h4.bold
     Files&nbsp&nbsp
-    = link_to new_upload_path(folder_id: @folder.id), class: 'pull-right btn-floating white-text deep-purple accent-3' do
-      %i.material-icons.white-text
-        note_add
+    = link_to new_upload_path(folder_id: @folder.id) do
+      %i.fa.fa-plus-circle.deep-purple-text.text-accent-3.pull-right
   %hr
   .section
     .row

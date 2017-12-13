@@ -22,6 +22,10 @@ $grey: #747E8D;
 $black: #000;
 $white: #FFF;
 
+h3 a {
+  color: $black;
+}
+
 .btn, .btn-large {
   border-radius: 8px !important;
 }

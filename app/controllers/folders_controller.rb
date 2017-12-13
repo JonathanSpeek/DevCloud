@@ -2,6 +2,7 @@
 # Controller to handle folders
 class FoldersController < ApplicationController
   before_action :find_folder, only: [:show, :edit, :update, :destroy]
+  before_action :find_parent, only: [:show]
   before_action :authenticate_user!
 
   def index
@@ -11,7 +12,6 @@ class FoldersController < ApplicationController
 
   def show
     @folders = Folder.where(user_id: current_user, parent_folder_id: @folder.id)
-    @folder = Folder.find(params[:id])
     @notes = Note.where(user_id: current_user, folder_id: @folder).paginate(page: params[:page], per_page: 4)
     @uploads = Upload.where(user_id: current_user, folder_id: @folder)
   end
@@ -50,6 +50,10 @@ class FoldersController < ApplicationController
 
   def find_folder
     @folder = Folder.find(params[:id])
+  end
+
+  def find_parent
+    @parent_folder = Folder.where(user_id: current_user, id: @folder.parent_folder_id)
   end
 
   def folder_params

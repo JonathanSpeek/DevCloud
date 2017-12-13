@@ -1,7 +1,16 @@
 <h3 class="bold deep-purple-text text-accent-3">
+  <% unless @parent_folder.blank? %>
+    <%= link_to folder_path(@parent_folder[0].id) do %>
+      <%= @parent_folder[0].name + " / " %>
+    <% end %>
+  <% else %>
+    <%= link_to root_path do %>
+      Home /
+    <% end %>
+  <% end %>
   <%= @folder.name %>
 </h3>
-<% unless @notes.blank? %>
+<% unless @folders.blank? %>
   <br>
   <h4 class="bold">
     Folders&nbsp&nbsp
@@ -37,6 +46,11 @@
     </div>
   </div>
   <br>
+<% else %>
+  <br>
+  <h3 class="bold">Folders</h3>
+  <hr>
+  <%= link_to 'New Folder', new_folder_path(folder_id: @folder.id), class: 'waves-effect btn white-text deep-purple accent-3' %>
 <% end %>
 <% unless @notes.blank? %>
   <br>
