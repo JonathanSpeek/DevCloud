@@ -47,10 +47,6 @@ gem 'bourbon'
 # Adds the Font Awesome library
 gem 'font-awesome-sass'
 
-# Handles syntax highlighting
-gem 'redcarpet'
-gem 'coderay'
-
 # Handles soft deletes
 gem 'paranoia'
 
@@ -66,9 +62,6 @@ gem 'will_paginate-materialize'
 # Handles markdown preview
 gem 'simplemde-rails'
 
-# Adds emoji support
-gem 'gemoji'
-
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3'
@@ -80,6 +73,8 @@ group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'guard-rspec'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
 end
 
 group :development do

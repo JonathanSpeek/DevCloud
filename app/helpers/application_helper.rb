@@ -1,29 +1,6 @@
 # frozen_string_literal: true
 # ApplicationHelper
 module ApplicationHelper
-  # CodeRay to render Markdown
-  class CodeRayify < Redcarpet::Render::HTML
-    def block_code(code, language)
-      language ||= "html"
-      CodeRay.scan(code, language).div
-    end
-  end
-
-  def markdown(text)
-    coderayified = CodeRayify.new(filter_html: true, hard_wrap: true)
-    options = {
-      tables: true,
-      fenced_code_blocks: true,
-      no_intra_emphasis: true,
-      autolink: true,
-      strikethrough: true,
-      lax_html_blocks: true,
-      superscript: true
-    }
-    markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
-    markdown_to_html.render(text).html_safe
-  end
-
   def devise_mapping
     Devise.mappings[:user]
   end
