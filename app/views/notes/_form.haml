@@ -2,6 +2,6 @@
 = simple_form_for @note do |f|
   = f.input :title
   = f.input :content, input_html: { style: 'height:50em;', id: 'SimpleMDE-Text-Area' }
-  = f.hidden_field :folder_id, :value => params[:folder_id]
+  = f.hidden_field :folder_id, :value => @note.folder_id
   %br
   = f.submit 'Save', class: 'btn deep-purple accent-3 white-text'

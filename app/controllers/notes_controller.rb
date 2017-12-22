@@ -32,7 +32,7 @@ class NotesController < ApplicationController
 
   def update
     if @note.update(note_params)
-      redirect_to controller: 'folders', action: 'show', id: @note.folder_id
+      redirect_to folder_path(@note.folder_id)
     else
       render 'edit'
     end
