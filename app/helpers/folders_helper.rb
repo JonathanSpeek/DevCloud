@@ -8,6 +8,6 @@ module FoldersHelper
       @parent_folders[parent_folder.id.to_s] = parent_folder.name
       find_parents(parent_folder)
     end
-    @parent_folders
+    @parent_folders.reverse_each.to_h
   end
 end
