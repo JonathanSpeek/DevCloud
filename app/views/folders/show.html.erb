@@ -1,7 +1,9 @@
 <h3 class="bold deep-purple-text text-accent-3">
   <% unless @parent_folder.blank? %>
-    <%= link_to folder_path(@parent_folder[0].id) do %>
-      <%= @parent_folder[0].name + " > " %>
+    <% find_parents(@folder).each do |parent| %>
+      <%= link_to folder_path(parent[0]) do %>
+        <%= parent[1] + " > " %>
+      <% end %>
     <% end %>
   <% else %>
     <%= link_to root_path do %>
