@@ -3,7 +3,7 @@
 class FoldersController < ApplicationController
   before_action :find_folder, only: [:show, :edit, :update, :destroy]
   before_action :find_parent, only: [:show]
-  before_action :authenticate_user!
+  load_and_authorize_resource
 
   def index
     @folders = Folder.where(user_id: current_user, parent_folder_id: nil).paginate(page: params[:page], per_page: 4)

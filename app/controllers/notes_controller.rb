@@ -2,7 +2,7 @@
 # Controller to handle notes
 class NotesController < ApplicationController
   before_action :find_note, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  load_and_authorize_resource
 
   def index
     @notes = Note.where(user_id: current_user).paginate(page: params[:page], per_page: 4)

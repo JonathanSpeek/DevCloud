@@ -2,7 +2,7 @@
 # Controller to handle the files uploaded by users
 class UploadsController < ApplicationController
   before_action only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  load_and_authorize_resource
 
   def index
     @uploads = Upload.all.where(user_id: current_user)
