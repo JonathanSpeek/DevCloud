@@ -11,6 +11,7 @@ class NotesController < ApplicationController
   end
 
   def show
+    @folder = Folder.find(@note.folder_id)
   end
 
   def new
@@ -21,7 +22,7 @@ class NotesController < ApplicationController
   def create
     @note = current_user.notes.build(note_params)
     if @note.save
-      redirect_to controller: 'folders', action: 'show', id: params[:note][:folder_id]
+      redirect_to @note
     else
       render 'new'
     end
@@ -32,7 +33,7 @@ class NotesController < ApplicationController
 
   def update
     if @note.update(note_params)
-      redirect_to folder_path(@note.folder_id)
+      redirect_to @note
     else
       render 'edit'
     end

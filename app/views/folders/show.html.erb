@@ -76,6 +76,9 @@
               <td><%= note.title %></td>
               <td><%= time_ago_in_words(note.created_at) %> ago</td>
               <td>
+                <%= link_to note_path(note) do %>
+                  <i class='fa fa-lg fa-eye deep-purple-text text-accent-3'></i>
+                <% end %>
                 <%= link_to edit_note_path(note) do %>
                     <i class='fa fa-lg fa-pencil-square-o deep-purple-text text-accent-3'></i>
                 <% end %>
