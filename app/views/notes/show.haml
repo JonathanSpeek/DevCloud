@@ -1,1 +1,11 @@
+.container
+  %h3.bold.note-folder
+    =link_to "#{@folder.name}", folder_path(@note.folder_id)
 
+  %h1.bold.center.note-title= @note.title
+  %hr
+  = markdown @note.content
+  %hr
+  %h5.bold.note-folder
+    = link_to 'Edit Note', edit_note_path(@note)
+    .pull-right= link_to 'Delete Note', note_path(@note), method: :delete, data: { confirm: 'Are you sure?' }
