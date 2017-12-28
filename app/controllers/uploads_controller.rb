@@ -19,9 +19,10 @@ class UploadsController < ApplicationController
 
     if @upload.save
       total_data
+      flash[:notice] = 'Baller! Your file was uploaded! 🏀'
       redirect_to controller: 'folders', action: 'show', id: @upload.folder_id
-
     else
+      flash[:notice] = 'Well, this is awkward... 😬'
       redirect_to(:back)
     end
   end
@@ -31,6 +32,7 @@ class UploadsController < ApplicationController
     if @upload.present?
       @upload.destroy
       total_data
+      flash[:notice] = '😎 more room for activities!'
     end
     redirect_to(:back)
   end

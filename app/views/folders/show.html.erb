@@ -38,7 +38,7 @@
               <%= link_to edit_folder_path(folder) do %>
                   <i class='fa fa-lg fa-pencil-square-o deep-purple-text text-accent-3'></i>
               <% end %>
-              <%= link_to folder_path(folder), method: :delete, data: {confirm: 'Are you sure?'}, onclick: "Materialize.toast('#{folder.name} Deleted', 4000)" do %>
+              <%= link_to folder_path(folder), method: :delete, data: {confirm: 'Are you sure?'} do %>
                 <i class='fa fa-lg fa-trash-o deep-purple-text text-accent-3'></i>
               <% end %>
             </td>
@@ -82,7 +82,7 @@
                 <%= link_to edit_note_path(note) do %>
                     <i class='fa fa-lg fa-pencil-square-o deep-purple-text text-accent-3'></i>
                 <% end %>
-                <%= link_to note_path(note), method: :delete, data: {confirm: 'Are you sure?'}, onclick: "Materialize.toast('#{note.title} Deleted', 4000)" do %>
+                <%= link_to note_path(note), method: :delete, data: {confirm: 'Are you sure?'} do %>
                     <i class='fa fa-lg fa-trash-o deep-purple-text text-accent-3'></i>
                 <% end %>
               </td>

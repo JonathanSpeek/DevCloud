@@ -45,6 +45,7 @@ class NotesController < ApplicationController
 
   def destroy
     @note.destroy
+    flash[:notice] = "☠️ RIP: #{@note.title}"
     redirect_to folders_path(@note.folder_id)
   end
 
