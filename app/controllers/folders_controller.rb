@@ -24,8 +24,10 @@ class FoldersController < ApplicationController
     @folder = current_user.folders.build(folder_params)
     @folder.parent_folder_id = params[:folder][:parent_folder_id]
     if @folder.save
+      flash[:notice] = 'Boom! Your Folder successfully saved! 💣'
       redirect_to @folder
     else
+      flash[:notice] = 'Hmm... Something went wrong. 🤔'
       render 'new'
     end
   end
@@ -35,14 +37,17 @@ class FoldersController < ApplicationController
 
   def update
     if @folder.update(folder_params)
+      flash[:notice] = 'Hot Dog! Your Folder had been updated! 🌭'
       redirect_to root_path
     else
+      flash[:notice] = 'Hmm... Something went wrong. 🤔'
       render 'edit'
     end
   end
 
   def destroy
     @folder.destroy
+    flash[:notice] = "✌️ out, #{@folder.name}. No one liked that folder anyway..."
     redirect_to(:back)
   end
 

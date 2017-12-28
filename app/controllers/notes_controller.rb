@@ -22,8 +22,10 @@ class NotesController < ApplicationController
   def create
     @note = current_user.notes.build(note_params)
     if @note.save
+      flash[:notice] = 'Huzzah! Your Note successfully saved! 😜'
       redirect_to @note
     else
+      flash[:notice] = 'Hmm... Something went wrong. 🤔'
       render 'new'
     end
   end
@@ -33,8 +35,10 @@ class NotesController < ApplicationController
 
   def update
     if @note.update(note_params)
+      flash[:notice] = 'Nice! Your Note was updated! 🙌'
       redirect_to @note
     else
+      flash[:notice] = 'Hmm... Something went wrong. 🤔'
       render 'edit'
     end
   end
