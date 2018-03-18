@@ -3,6 +3,7 @@
     =link_to "#{@folder.name}", folder_path(@note.folder_id)
 
   %h1.bold.center.note-title= @note.title
+  %h5.center= raw @note.all_tags
   %hr
   = markdown @note.content
   %hr
