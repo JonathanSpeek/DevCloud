@@ -3,6 +3,9 @@
     <img style="width:500px;height:auto;" src="https://cdn.rawgit.com/JonathanSpeek/devcloud/master/devcloud-screenshot.png"/>
 </div>
 
+## Warning
+File storage has been disabled, as I have removed the connected AWS S3 bucket for now.
+
 ## Features
 * User can login using Github or Google
 * User can create, read, update, and destroy notes in Markdown
