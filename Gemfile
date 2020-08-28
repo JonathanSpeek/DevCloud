@@ -40,7 +40,7 @@ gem 'stripe'
 gem 'chartkick'
 
 # Handles an admin dashboard
-gem 'administrate', '~> 0.3.0'
+gem 'administrate', '~> 0.13.0'
 
 gem 'bourbon'
 
