@@ -62,7 +62,7 @@ gem 'will_paginate-materialize'
 # Handles markdown preview
 gem 'simplemde-rails'
 gem 'pygments.rb', '~> 1.2.1'
-gem 'redcarpet', '~> 3.4.0'
+gem 'redcarpet', '~> 3.5.1'
 
 group :development, :test do
   gem 'byebug'
